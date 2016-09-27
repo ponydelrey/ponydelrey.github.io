@@ -1,0 +1,163 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+body {
+font-family: 'Raleway', sans-serif; 
+  font-weight: 300;
+  color: #fff;
+ 
+  
+}
+
+p {
+    margin-left: 95px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-left: 95px;
+}
+
+#btn2 {
+    background-color: #454745;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 99%; 
+	height: 400px;
+	background-color: #0f0f1a;
+	padding: 140px 40px 40px 40px;
+
+
+}
+img {
+    margin-left: 240px;
+    width: 25%;
+    border-radius: 70px;
+}
+
+.main .container {
+   	padding: 150px 150px 150px 150px; 
+   		height: 689px;
+   		margin-top: 100px;
+   		 border-bottom: solid 1px #33B3C9;
+}
+
+
+.supporting .container {
+    margin-top: 0px;
+    	width: 99%%; 
+height: 900px;
+	background-color: #2a2d31;
+	
+	background: url(https://photos-2.dropbox.com/t/2/AACPolya5emu4tEcGopq0mWSEdkqNRB2BebvkHqYnJ-yKA/12/343874355/png/32x32/1/_/1/2/22.svg/EJ3LmNgCGAogAigC/Zf5oijygM2bfEtnIsnSxf2cMPwjbT54WuGO31LxBFWg?size=1600x1200&size_mode=);
+	 background-attachment: fixed;
+	background-size: 50% 100%;
+	background-repeat: repeat-x;
+	background-position: 1px 80px;
+
+    
+    
+}
+
+.btn-blue {
+    background-color: #99B5B5;
+    padding: 10 10 10 10;
+    border-radius: 30px;
+    color: black;
+    text-align: right;
+    
+}
+.nav {
+    width: 100%;
+ background-color: black;
+       float: right;
+       margin-bottom: 0px;
+       position: fixed;
+      
+       	border-bottom: solid 1px #33B3C9;
+    
+}
+.nav-container{background-color: red;}
+
+
+.nav ul {
+	list-style: none;
+	margin: 0 auto; 
+	padding: 13px 10px;
+	text-align: center; 
+	background-color: #000;
+	
+	
+}
+
+ul li {
+    display: inline;
+    color:  #97ecf9;
+    text-align: center;
+    background-color: #000;
+  
+}
+
+ul li a {
+    color:  #a975a7;
+    text-decoration: none;
+    font-weight: bolder;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #000;
+     
+}
+
+ul li a.btn {
+    	background-color: black;
+    padding: 23px 40px;
+    color: #4ddbff;
+    text-decoration: none;
+    font-weight: bolder;
+      letter-spacing: 2.2px
+        
+}
+
+
+
+
+.btn:hover{
+    border: 1px solid #3deec6;
+    border-radius: 0px;
+    color: #3deec6;
+    
+}
+.nav-container{
+border-bottom: solid 1px #33B3C9;
+}
+#menu {
+
+background-color: black;
+  position: fixed;
+  top: 0px;
+ width: 100%;
+ z-index: 9999;
+
+}
+
+
+
+
+.footer {
+    background-color: #000;
+}
+
+.footer ul li {
+    display: inline-block;
+}
+
+
