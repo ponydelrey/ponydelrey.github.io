@@ -1,67 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp" class="no-js">
 <head>
-	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
-   <link href='http://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href='style.css'/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet'>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootst.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
-
-
-  <div class="nav-container">
-    <div class="nav"  id = "menu">
-       <ul> 
-           <li> <a class = "btn" href= "#"> Clan History </a></li>
-             <li> <a class = "btn" href= "#"> Members </a></li>
-               <li> <a class = "btn" href= "#"> Documents </a></li>
-                 <li> <a class = "btn" href= "#"> Contact </a></li>
-                   <li> <a class = "btn" href= "#"> News </a></li>
-       </ul>
-</div>
-</div>
-
-<div class="main">
-    <div class="container">
-    <div class="row">
-    <div class="col-md-6">   <h2> It's  time to join tournies!'</h2>
-       <p> Again it's time of the year when we are setting up <br></br>tournaments on our swedish servers. <br></br>Do not hesitate to test your skill and sign up to our ladder right now!</p>
-     
-     
-            
-        </div> 
-        <div class="col-md-6"> 
-        <img src="https://photos-3.dropbox.com/t/2/AADrApAlg7x7QvOz9GOrJx3V8MC0P2Z7o5vnohMK2Ro7KQ/12/343874355/png/32x32/1/_/1/2/kawaiTesla.svg/EJ3LmNgCGAogAigC/uSWI5lWG14qMAR8C_M41K8aRP7xhV0Odt3jf0P39wn4?size=1600x1200&size_mode=2" class="circle-mask">
-       
-        
-    
-
-            
-        </div>
-        </div>
-     
-              <a href="#" class= "btn-blue"> xx</a>
-        <a href="#" id= "btn2" class= "btn-blue"> xx</a>
-     
-</div>
-</div>
-
-<div class="supporting">
-    <div class="container">
-        <h5> </h5>
-        <! no need to put here anything yet>
+  <body>
+    <div class="header">
+      <div class="container">
+        <ul class="nav">
+  <a href ="#"> O nas  </a>
+  <a href ="#"> Zajęcia </a>
+  <a href ="#"> Kadra </a>
+  <a href ="#"> Zaloguj </a>
+        </ul>
+      </div>
     </div>
-</div>
 
-
-<div class="footer">
-
-    <ul><div class ="pull-left">
-        <li> <a class = "btn" href="#" >aaa</a></li>
-        <li> <p> &copy 2g2g </a></li>
+    <div class="jumbotron">
+      <div class="container">  
+        <div class="main">
+          <h1>AERIAL HOOP</h1>
+          <a class = "btn-main" href="#"> Dowiedz się więcej </a>
+          
+            <div ng-view></div>
         </div>
-    </ul>
+      </div>
+    </div>
 
-</div>
-</body>
+    <div class="supporting">
+      <div class="container">
+        <div class="col">
+          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
+          <h2>Design</h2>
+          <p>Make your projects look great and interact beautifully.</p>
+          <a href="#" > learn more </a>
+        </div>
+        
+        <div class="col">
+          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
+          <h2>Develop</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+              <a href="#" > learn more </a>
+        </div>
+        
+        <div class="col">
+          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/deploy.svg">
+          <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+              <a href="#" > learn more </a>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p>&copy; ponyhunt3r 2017</p>
+      </div>
+    </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  </body>
 </html>
