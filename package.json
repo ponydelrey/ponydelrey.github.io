@@ -1,0 +1,22 @@
+{
+  "name": "blackbird",
+  "version": "1.0.0",
+  "description": "Black Brd Aerial Dancer - Angular App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ponydelrey/ponydelrey.github.io.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "ponyhunt3r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ponydelrey/ponydelrey.github.io/issues"
+  },
+  "homepage": "https://github.com/ponydelrey/ponydelrey.github.io#readme"
+}

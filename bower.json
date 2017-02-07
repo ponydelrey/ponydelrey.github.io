@@ -1,0 +1,21 @@
+{
+  "name": "blackbird",
+  "description": "Black Brd Aerial Dancer - Angular App",
+  "main": "index.js",
+  "authors": [
+    "ponyhunt3r"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "https://github.com/ponydelrey/ponydelrey.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
