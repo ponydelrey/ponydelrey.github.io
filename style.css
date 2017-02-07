@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   /*background: url("http://25.media.tumblr.com/98aec9f019a3eab0563695cac9e19cd3/tumblr_miaiuikwRt1qdeuyro1_1280.jpg")no-repeat center center fixed;*/
   
-  background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;
+background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;
  background-size:cover;
 }
 
@@ -13,13 +13,22 @@ html, body {
   margin: 0 auto;
   color: #fff;
 }
+ul {
+  display: inline-block !important;
+}
 
 .header {
    /*// background-color: #333333;*/
-       background-color: rgba(0, 0, 0, 0.2);
-    
+  background-color: rgba(0, 0, 0, 0.2); 
+  height: 60px; 
+  position: fixed;
+  width: 100%;
+  display: inline-block;
 }
 
+.nav-left {
+  margin-top: 20px;
+}
 
 .btn-main {
    
@@ -57,23 +66,29 @@ html, body {
       
 }
 
-
-
 .jumbotron {
   height: 800px;
+  background-color: transparent !important;
 
 }
 
 .nav {
-  margin: 0;
-  padding: 20px 0;
-}
+  margin: 5px;
+  padding: 20px 40px;
 
+}
+.header .container .nav {
+  position: fixed; 
+
+}
 .nav li {
   color: #fff;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 12px;
+}
+.pull-right a {
+  margin-top: 20px;
 }
 
 .main {
