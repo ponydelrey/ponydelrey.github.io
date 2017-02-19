@@ -9,10 +9,15 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
 }
 @font-face {
     font-family: youregone;
-    src: url(bower_components/font-awesome/fonts/u.otf);
+    src: url(bower_components/font-awesome/fonts/rouge.ttf);
 }
 
-
+ a.blackbird {
+  font-family: youregone;
+  text-transform: capitalize !important;
+  font-size: 26px !important;
+  
+}
 .container {
   width: 640px;
   margin: 0 auto;
@@ -32,7 +37,7 @@ ul {
 }
 
 .nav-left {
-  margin-top: 20px;
+ 
 }
 
 .btn-main {
@@ -49,25 +54,17 @@ ul {
 .header a {
     text-transform: uppercase;
     text-decoration: none;
-        margin-left: 0px;
+        margin-top: 20px;
         display: inline-block;
         width: 130px;
         letter-spacing: 2px;
         font-size: 16px;
         color: #54E5BF;
+       
       
 }
 .header a:hover {
-    text-transform: uppercase;
-    text-decoration: none;
-        margin-left: 0px;
-        display: inline-block;
-        font-family: 'Raleway';
-        width: 130px;
-        letter-spacing: 2px;
-        font-size: 16px;
-        text-shadow: 0 0 5px #FFF
-      
+        text-shadow: 0 0 5px #FFF      
 }
 
 .jumbotron {
@@ -93,6 +90,7 @@ ul {
 }
 .pull-right a {
   margin-top: 20px;
+  width: 160px;
 }
 
 .main {
@@ -108,7 +106,7 @@ ul {
   font-size: 70px;
   margin-top: 0;
   margin-bottom: 80px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .supporting {
@@ -125,7 +123,7 @@ ul {
 }
 
 .supporting img {
-  height: 32px;
+  height: 102px;
 }
 
 .supporting h2 {

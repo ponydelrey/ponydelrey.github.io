@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="style.css">
+  <script src=”https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js”></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
@@ -18,14 +19,14 @@
 
     <div ng-controller="MainController" class="header">
         <ul class="nav-left">
-          <a href ="#"> O nas  </a>
+          <a href="#"> O nas </a>
           <a href ="#"> Zajęcia </a>
           <a href ="#"> Kadra </a>
-          <a href ="#"> Zaloguj </a>
+          <a href ="#"> {{ my }} </a>
         </ul>
           <ul class="pull-right">
-           <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-          <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+           <a href="#"><span class="glyphicon glyphicon-user"></span> Zarejestruj</a>
+          <a href="#"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a>
       </ul>
 
 </div>
@@ -34,7 +35,7 @@
     <div class="jumbotron">
       <div class="container">  
         <div class="main">
-          <h1>Black Bird <br/> AERIAL HOOP</h1>
+          <h1>Black Bird <br/> Aerial Hoop</h1>
           <a class = "btn-main" href="#"> Dowiedz się więcej </a>
           
             <div ng-view></div>
@@ -45,24 +46,24 @@
     <div class="supporting">
       <div class="container">
         <div class="col">
-          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
-          <h2>Design</h2>
-          <p>Make your projects look great and interact beautifully.</p>
-          <a href="#" > learn more </a>
+          <img src="./images/hoop.jpg">
+          <h2>Aerial Hoop</h2>
+          <p>Twórz niepowtarzalne układy za pomocą obręczy Aerial Hoop</p>
+          <a href="#" > Szczegóły </a>
         </div>
         
         <div class="col">
-          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
-          <h2>Develop</h2>
-          <p>Use modern tools to turn your design into a web site</p>
-              <a href="#" > learn more </a>
+          <img src="./images/pole.jpg">
+          <h2>Pole dance</h2>
+          <p>Wyraź siebie poprzez połączenie tańca na rurze i akrobatyki</p>
+              <a href="#" > Szczegóły </a>
         </div>
         
         <div class="col">
-          <img src="http://s3.amazonaws.com/codecademy-content/projects/broadway/deploy.svg">
-          <h2>Deploy</h2>
-          <p>Use modern tools to turn your design into a web site</p>
-              <a href="#" > learn more </a>
+          <img src="./images/fun.png">
+          <h2>Rozwój</h2>
+          <p>Zdobywaj nowe umiejętności pod czujnym okiem ekspertów, z ludźmi dążacymi do tego samego celu</p>
+              <a href="#" > Szczegóły </a>
         </div>
       </div>
       <div class="clearfix"></div>

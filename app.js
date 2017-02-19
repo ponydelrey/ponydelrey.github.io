@@ -1,5 +1,6 @@
-var BBApp = angular.module('BBApp', []);
+var BBApp = angular.module('BBApp', [])
 
-BBApp.controller('MainController', ['$scope', function($scope) {
+BBApp.controller('MainController', ['$scope', function ($scope) {
 
-}]);
+$scope.my = 'Galeria';
+}])
