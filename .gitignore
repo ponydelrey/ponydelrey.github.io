@@ -1,0 +1,6 @@
+*.yml
+node_modules/util-deprecate/LICENSE
+*.md
+node_modules/wrappy/wrappy.js
+node_modules/*
+node_modules/*/*
