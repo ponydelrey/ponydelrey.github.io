@@ -61,6 +61,7 @@ ul {
   position: fixed;
   width: 100%;
   display: inline-block;
+  z-index: 9999;
 }
 
 @media screen and (max-width:680px) {
@@ -83,6 +84,12 @@ ul {
     text-decoration: none;
     color: #fff;
 }
+
+.btn-main:hover  {
+  color: #54E5BF;
+  text-transform: uppercase;
+      text-decoration: none;
+}
 .header a {
     text-transform: uppercase;
     text-decoration: none;
@@ -92,6 +99,7 @@ ul {
         letter-spacing: 2px;
         font-size: 16px;
         color: #54E5BF;
+        z-index: 9999;
        
       
 }
@@ -188,6 +196,10 @@ ul {
     text-transform: uppercase;
     color: #333333;
     padding: 10px 20px 10px 20px;
+}
+
+.supporting a:hover {
+    box-shadow: 5px 5px  5px #54E5BF;
 }
 
 .clearfix {
