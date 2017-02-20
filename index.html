@@ -13,12 +13,23 @@
   <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
+  <script> function myFunction() {
+    console.log('check');
+    var x = document.getElementById("myNav");
+    if (x.className === "nav-left") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-left";
+    }
+}
+</script>
 </head>
   <body>
 
 
     <div ng-controller="MainController" class="header">
-        <ul class="nav-left">
+        <ul class="nav-left" id="myNav">
+          <a class="icon" href="#" onclick="myFunction()">&#9776;</a>
           <a href="#"> O nas </a>
           <a href ="#"> Zajęcia </a>
           <a href ="#"> Kadra </a>
@@ -45,21 +56,21 @@
 
     <div class="supporting">
       <div class="container">
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-lg-4">
           <img src="./images/hoop.jpg">
           <h2>Aerial Hoop</h2>
           <p>Twórz niepowtarzalne układy za pomocą obręczy Aerial Hoop</p>
           <a href="#" > Szczegóły </a>
         </div>
         
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-lg-4">
           <img src="./images/pole.jpg">
           <h2>Pole dance</h2>
           <p>Wyraź siebie poprzez połączenie tańca na rurze i akrobatyki</p>
               <a href="#" > Szczegóły </a>
         </div>
         
-        <div class="col">
+        <div class="col-xs-12 col-sm-12 col-lg-4">
           <img src="./images/fun.png">
           <h2>Rozwój</h2>
           <p>Zdobywaj nowe umiejętności pod czujnym okiem ekspertów, z ludźmi dążacymi do tego samego celu</p>
