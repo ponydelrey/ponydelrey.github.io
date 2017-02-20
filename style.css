@@ -10,6 +10,7 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
 
 @media only screen and (max-width : 620px) {
 	background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w") no-repeat center center fixed;
+  background-size: 100%; 
 }
 @font-face {
     font-family: youregone;
@@ -22,13 +23,13 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
   font-size: 26px !important;
   
 }
-@media only screen and (max-width : 620px) {
+@media only screen and (min-width: 1000px) {
 .container{
-  width: 100%
+  width: 640px;
+    color: #fff;
 }
 }
 .container {
-  width: 640px;
   margin: 0 auto;
   color: #fff;
 }
@@ -141,6 +142,10 @@ ul {
   .pull-right a {
     display: block;
 
+  }
+  .col-xs-12{
+    width: 100%;
+    display: block;
   }
 }
 
