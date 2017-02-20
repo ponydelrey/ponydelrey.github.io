@@ -22,6 +22,11 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
   font-size: 26px !important;
   
 }
+@media only screen and (max-width : 620px) {
+.container{
+  width: 100%
+}
+}
 .container {
   width: 640px;
   margin: 0 auto;
