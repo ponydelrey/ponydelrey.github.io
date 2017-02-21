@@ -13,10 +13,21 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
 }
 
 @media only screen and (max-width : 620px) {
-  body{
-	background: url("http://nolimits.art.pl/poledance/wp-content/uploads/2015/09/aa46105488df1300d5bc33ce8943bcef.jpg");
-background-size: auto;
-  }
+
+  body:before {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  left: 0;
+  top: 0;
+  background: url("http://nolimits.art.pl/poledance/wp-content/uploads/2015/09/aa46105488df1300d5bc33ce8943bcef.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 }
 @font-face {
     font-family: youregone;
@@ -35,7 +46,7 @@ background-size: auto;
     color: #fff;
 }
 .icon {
-  color: #54E5BF;
+  color: #54E5BF !important;
 }
 }
 .container {
@@ -103,7 +114,8 @@ ul {
 .btn-main:hover  {
   color: #54E5BF;
   text-transform: uppercase;
-      text-decoration: none;
+  text-decoration: none;
+  transform: translateY(10px);
 }
 .header a {
     text-transform: uppercase;
