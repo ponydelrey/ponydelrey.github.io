@@ -11,8 +11,6 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
 @media only screen and (max-width : 620px) {
 
   body {
-  display: block;
-  position: fixed;
   width: 100%;
   height: 100%;
   z-index: -10;
@@ -158,7 +156,7 @@ ul {
 @media screen and (max-width:680px) {
   .pull-right a {
     display: block;
-    margin-top: 0px;
+    margin-top: -10px;
 
   }
   .col-xs-12{
