@@ -47,29 +47,36 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
   margin: 0 auto;
   color: #fff;
 }
-ul {
+ul li{
   display: inline-block !important;
+}
+ul {
+  display: inline-block;
 }
 
 .icon {
   display: none !important;
 }
+#log {
+  margin-left: 20px;
+  margin-right: -10px;
+}
 
 @media screen and (max-width:680px) {
-  ul.nav-left a:not(:first-child) {display: none;}
-  ul.nav-left a.icon {
+  ul.nav-left li a:not(:first-child) {display: none;}
+  ul.nav-left li a.icon {
     float: right;
     display: inline-block !important;
   }
 }
 @media screen and (max-width:680px) {
   ul.top-left.responsive {position: relative;}
-  ul.top-left.responsive a.icon {
+  ul.top-left.responsive li a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-   ul.nav-left.responsive a:not(:first-child){
+   ul.nav-left.responsive li a:not(:first-child){
     display: block !important;
     text-align: left;
   }
