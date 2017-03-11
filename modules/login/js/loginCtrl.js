@@ -13,7 +13,7 @@ angular.module('BBApp').controller('loginCtrl', ['FBMSG', function (FBMSG) {
 				console.log('user created', userData);
 			}
 		}
-	
+	}
 // 	ref.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
 //   // Handle Errors here.
 //   var errorCode = error.code;

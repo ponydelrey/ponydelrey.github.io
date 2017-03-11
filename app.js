@@ -8,7 +8,7 @@ BBApp.config(function($routeProvider){
             templateUrl: 'home.html'
         })
         .when('/login', {
-            templateUrl: 'modules/login/views/login.html'
+            templateUrl: 'modules/login/views/login.html',
             controller: 'loginCtrl',
             controllerAs: 'loginCtrl'
         })
