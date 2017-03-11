@@ -1,6 +1,6 @@
 var BBApp = angular.module('BBApp', ['firebase','ngRoute']);
 
-BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseapp.com/events");
+BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 
 BBApp.config(function($routeProvider){
     $routeProvider
@@ -8,7 +8,9 @@ BBApp.config(function($routeProvider){
             templateUrl: 'home.html'
         })
         .when('/login', {
-            templateUrl: 'login.html'
+            templateUrl: 'modules/login/views/login.html'
+            controller: 'loginCtrl',
+            controllerAs: 'loginCtrl'
         })
         .when('/register', {
             templateUrl: 'register.html'
