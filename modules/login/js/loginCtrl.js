@@ -1,20 +1,33 @@
-angular.module('BBApp').controller('loginCtrl', ['FBMSG', function (FBMSG) {
+angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$window', function (FBMSG, $window, Service) {
 
 	var self = this;
-	var ref = new Firebase(FBMSG, 'createUser');
-	console.log('ref stuff', ref)
-	var cb = function() {
-		console.log('mockup of a callback')
+	var ref = new Firebase(FBMSG);
+	console.log('ref fire:', ref);
+	var cb = function(){
+		console.log('cb');
 	}
 	self.signUp = function(){
-	firebase.auth(ref).createUserWithEmailAndPassword(self.email, self.password).catch(function(error) {
- //Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log('xx', error.message);
-  console.log('yy', error);
-  // ...
-});
+		var email = self.email;
+        var password = self.password;
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+ 
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          
+
+        });
+
+        var host = $window.location.host;
+        var landingUrl = "http://" + host + "/#/";
+        alert("Being redirected to: ",landingUrl);
+        $window.location.href = landingUrl;
 	}
 
 }]);

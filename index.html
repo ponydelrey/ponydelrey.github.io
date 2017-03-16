@@ -42,17 +42,19 @@
   <body>
 
 
-    <div data-ng-controller="MainController" class="header">
+    <div data-ng-controller="MainController as main" class="header">
         <ul class="nav-left" id="myNav">
-          <li><a class="icon" href="#" onclick="myFunction()">&#9776;</a></li>
+          <li><a class="icon" href="#" onclick="main.myFunction()">&#9776;</a></li>
           <li><a href="#"> O nas </a></li>
-          <li><a href ="#"> {{ my }} </a></li>
+          <li><a href ="#"> {{ main.my }} </a></li>
           <li><a href ="#"> Blog </a></li>
           <li><a href ="#"> WonderWear </a></li>
         </ul>
           <ul class="pull-right">
-           <li><a href="#register"><span class="glyphicon glyphicon-user"></span> Zarejestruj</a></li>
-          <li><a id='log' href="#login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+            <li><a href="#" ng-show="main.hideSignPanel" ng-bind=" main.user.userName">  </a></li>
+            <li> <a href="#" ng-show="main.hideSignPanel" ng-click="main.logout()"> Logout </a> </li>
+           <li><a href="#register" ng-show="main.showSignPanel"><span class="glyphicon glyphicon-user"></span> Zarejestruj</a></li>
+          <li><a id='log'  ng-show="main.showSignPanel" href="#login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
       </ul>
 
 </div>
