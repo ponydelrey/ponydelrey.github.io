@@ -17,10 +17,7 @@ background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226
   left: 0;
   top: 0;
   background: url("http://nolimits.art.pl/poledance/wp-content/uploads/2015/09/aa46105488df1300d5bc33ce8943bcef.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
 }
 }
 @font-face {
@@ -63,7 +60,7 @@ ul {
 }
 
 @media screen and (max-width:680px) {
-  ul.nav-left li a:not(:first-child) {display: none;}
+  ul.nav-left li:not(:first-child) {display: none!important}
   ul.nav-left li a.icon {
     float: right;
     display: inline-block !important;
@@ -76,7 +73,7 @@ ul {
     right: 0;
     top: 0;
   }
-   ul.nav-left.responsive li a:not(:first-child){
+   ul.nav-left.responsive li:not(:first-child){
     display: block !important;
     text-align: left;
   }
@@ -161,6 +158,10 @@ ul {
   width: 160px;
 }
 @media screen and (max-width:680px) {
+  .pull-right{
+    position: fixed;
+    top: 5px;
+  }
   .pull-right a {
     display: block;
     margin-top: -10px;
@@ -249,6 +250,9 @@ ul {
 .footer p {
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
+}
+#logout {
+  margin-left: 20px;
 }
 
 input, textarea{
