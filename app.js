@@ -6,58 +6,70 @@ BBApp.config(function($routeProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'home.html',
-            controller: 'MainController',
-            controllerAs: 'main'
+            controller: 'MainController'
         })
         .when('/login', {
             templateUrl: 'modules/login/views/login.html',
-            controller: 'loginCtrl',
-            controllerAs: 'loginCtrl'
+            controller: 'loginCtrl'
         })
         .when('/register', {
-            templateUrl: 'register.html'
+            templateUrl: 'modules/register/views/register.html',
+            controller: 'registerCtrl'
         })
+        .otherwise({redirectTo : '/'})
 
 });
 
 
-BBApp.controller('MainController', ['$scope', function ($scope, Service) {
-	var self = this;
-	self.Service = Service;
-	self.user = {};
+BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', function ($scope, $rootScope, $location) {
+	
+	
+    $scope.user = {};
+    $scope.showSignPanel = true;
+   
 
-	    self.logout = function(){
+
+      $scope.$on('$routeChangeStart', function(angularEvent, newUrl) {
+
+            if (1) {
+                // User isn’t authenticated
+            }
+
+        });
+
+	    $scope.logout = function(){
     	if (firebase.auth().currentUser) {
         // [START signout]
         firebase.auth().signOut();
-        console.log('logout');
-        $route.reload();
+        $scope.user.userName = "";
+        console.log('user and scope user:', $scope.userName);
+        $scope.showSignPanel = true;
+        $scope.hideSignPanel = false;
+         $location.path('/#');
     	}
     }
 	
 
-	console.log('were in controller', $scope.hideSignPanel, $scope.showSignPanel);
+	console.log('were in  controller', $scope.hideSignPanel, $scope.showSignPanel);
 
 
-firebase.auth().onAuthStateChanged(function(user) {
-	if(user){
-		console.log('changed state');
-		self.user = user;
-		self.user.userName = user.email;
-		console.log('user:', user, $scope.userName);
-		self.showSignPanel = false;
-		self.hideSignPanel = true;
+    firebase.auth().onAuthStateChanged(function(user) {
+    	if(user){
+    		console.log('changed state');
+    		$scope.user = user;
+    		$scope.user.userName = user.email;
+    		console.log('user and scope user:', user, $scope.userName);
+    		$scope.showSignPanel = false;
+    		$scope.hideSignPanel = true;
+            $scope.$apply();
 
-	}else{
-	console.log('fixed to true');
-	self.showSignPanel = true;
-	}
-	self.check = function (password) {
+    	}
+	$scope.check = function (password) {
     console.log(password);
 }
 });
 
-self.my = 'Galeria';
+$scope.my = 'Galeria';
 
 
 }])

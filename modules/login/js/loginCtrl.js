@@ -1,14 +1,14 @@
-angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$window', function (FBMSG, $window, Service) {
+angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$location','$scope', function (FBMSG, $location, $scope) {
 
-	var self = this;
+
+
+  $rootScope.user;
 	var ref = new Firebase(FBMSG);
-	console.log('ref fire:', ref);
-	var cb = function(){
-		console.log('cb');
-	}
-	self.signUp = function(){
-		var email = self.email;
-        var password = self.password;
+
+
+	$scope.signUp = function(){
+		var email = $scope.email;
+        var password = $scope.password;
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -24,10 +24,8 @@ angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$window', function (F
 
         });
 
-        var host = $window.location.host;
-        var landingUrl = "http://" + host + "/#/";
-        alert("Being redirected to: ",landingUrl);
-        $window.location.href = landingUrl;
+       
+        $location.path('/#');
 	}
 
 }]);
