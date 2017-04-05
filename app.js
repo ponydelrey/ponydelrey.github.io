@@ -24,6 +24,10 @@ BBApp.config(function($routeProvider){
             templateUrl: 'modules/gallery/views/gallery.html',
             controller: 'galleryCtrl'
         })
+        .when('/wear', {
+            templateUrl: 'modules/wear/views/wear.html',
+            controller: 'wearCtrl'
+        })
         .otherwise({redirectTo : '/'})
 
 });

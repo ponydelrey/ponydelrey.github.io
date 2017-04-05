@@ -3,7 +3,10 @@ html, body {
   padding: 0;
   /*background: url("http://25.media.tumblr.com/98aec9f019a3eab0563695cac9e19cd3/tumblr_miaiuikwRt1qdeuyro1_1280.jpg")no-repeat center center fixed;*/
   
-background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;
+/*background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;*/
+background: url("http://www.scott-eaton.com/wp/wp-content/BodiesInMotion-AerialHoop.jpg")no-repeat center center fixed;
+
+
  background-size:cover;
  font-family: 'Helvetica';
 }
