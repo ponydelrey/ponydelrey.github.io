@@ -1,8 +1,5 @@
 angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$location','$scope', function (FBMSG, $location, $scope) {
 
-
-
-  $rootScope.user;
 	var ref = new Firebase(FBMSG);
 
 

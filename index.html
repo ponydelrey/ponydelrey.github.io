@@ -13,9 +13,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
   <script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
   <script src="app.js"></script>
   <script src="modules/login/js/loginCtrl.js"></script>
   <script src="modules/register/js/registerCtrl.js"></script>
+  <script src="modules/classes/js/classCtrl.js"></script>
+  <script src="modules/gallery/js/galleryCtrl.js"></script>
   <script> function myFunction() {
     console.log('check');
     var x = document.getElementById("myNav");
@@ -46,8 +49,8 @@
     <div data-ng-controller="MainController" class="header">
         <ul class="nav-left" id="myNav">
           <li><a class="icon" href="/#" onclick="myFunction()">&#9776;</a></li>
-          <li><a href="#"> O nas. </a></li>
-          <li><a href ="#"> {{ my }} </a></li>
+          <li><a href="#classes"> Zajęcia </a></li>
+          <li><a href ="#gallery"> {{ my }} </a></li>
           <li><a href ="#"> Blog </a></li>
           <li><a href ="#"> WonderWear </a></li>
         </ul>

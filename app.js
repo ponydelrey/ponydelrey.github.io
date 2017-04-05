@@ -1,4 +1,4 @@
-var BBApp = angular.module('BBApp', ['firebase','ngRoute']);
+var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap']);
 
 BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 
@@ -15,6 +15,14 @@ BBApp.config(function($routeProvider){
         .when('/register', {
             templateUrl: 'modules/register/views/register.html',
             controller: 'registerCtrl'
+        })
+        .when('/classes', {
+            templateUrl: 'modules/classes/views/class.html',
+            controller: 'classCtrl'
+        })
+           .when('/gallery', {
+            templateUrl: 'modules/gallery/views/gallery.html',
+            controller: 'galleryCtrl'
         })
         .otherwise({redirectTo : '/'})
 
