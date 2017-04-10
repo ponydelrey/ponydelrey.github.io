@@ -33,7 +33,7 @@ BBApp.config(function($routeProvider){
 });
 
 
-BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', function ($scope, $rootScope, $location) {
+BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http', function ($scope, $rootScope, $location, $http) {
 	
 	
     $scope.user = {};
@@ -55,6 +55,8 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', functi
         firebase.auth().signOut();
         $scope.user.userName = "";
         console.log('user and scope user:', $scope.userName);
+        var ref = firebase.database();
+        console.log('database .',ref);
         $scope.showSignPanel = true;
         $scope.hideSignPanel = false;
          $location.path('/#');
@@ -63,6 +65,7 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', functi
 	
 
 	console.log('were in  controller', $scope.hideSignPanel, $scope.showSignPanel);
+    console.log('db so ', firebase.database().ref('classes'));
 
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -70,7 +73,9 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', functi
     		console.log('changed state');
     		$scope.user = user;
     		$scope.user.userName = user.email;
-    		console.log('user and scope user:', user, $scope.userName);
+    		$http.get("http://aerialhoop-67936.firebaseio.com/classes.json").then(function(res) {
+    console.log('x',res);
+});
     		$scope.showSignPanel = false;
     		$scope.hideSignPanel = true;
             $scope.$apply();
@@ -81,7 +86,7 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', functi
 }
 });
 
-$scope.my = 'Galeria';
+$scope.my = "Galeria"
 
 
 }])
