@@ -1,4 +1,9 @@
 angular.module('BBApp').controller('classCtrl', function ($scope) {
+
+
+$scope.ss = 'ss';
+$scope.days = ['hours', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+
   $scope.today = function() {
     $scope.dt = new Date();
   };

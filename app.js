@@ -1,4 +1,4 @@
-var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap']);
+var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
 BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 
@@ -27,6 +27,10 @@ BBApp.config(function($routeProvider){
         .when('/wear', {
             templateUrl: 'modules/wear/views/wear.html',
             controller: 'wearCtrl'
+        })
+         .when('/post', {
+            templateUrl: 'modules/news/views/post.html',
+            controller: 'postCtrl'
         })
         .otherwise({redirectTo : '/'})
 
