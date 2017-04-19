@@ -1,8 +1,10 @@
-angular.module('BBApp').controller('classCtrl', function ($scope) {
+angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray, FBMSG) {
 
 
-$scope.ss = 'ss';
-$scope.days = ['hours', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+ var ref = firebase.database.ref();
+
+console.log('ref111', ref);
+$scope.days = ['Hours', 'Poniedziałek', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
   $scope.today = function() {
     $scope.dt = new Date();

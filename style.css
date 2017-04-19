@@ -22,12 +22,19 @@ background: url("http://www.scott-eaton.com/wp/wp-content/BodiesInMotion-AerialH
   width: 130px;
   height: 290px;
   background-color:#54E5BF;
-  opacity: 0.9;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   display: inline-block;
   padding: 10 10 10 10;
   margin-right: 20px;
   margin-top: 30px;
 
+}
+
+.day {
+  color: #54E5BF;
+  font-family: Raleway;
+  font-weight: 100;
+  font-size: 12px;
 }
 
 @media only screen and (max-width : 620px) {
