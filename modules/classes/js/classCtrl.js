@@ -1,8 +1,30 @@
-angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray, FBMSG) {
+angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray, $firebaseObject, FBMSG) {
 
-var obj = firebase.database().ref('classes');
-console.log('ref11122', obj);
-$scope.days = ['Hours', 'Poniedziałek', 'tuesday', 'wednesday', 'thursday', 'friday'];
+
+     var ref = firebase.database().ref();
+     var obj = $firebaseObject(ref);
+
+     //take an action after the data loads
+     obj.$loaded().then(function() {
+        console.log("loaded record:", obj.$id, obj.classes);
+       angular.forEach(obj, function(value, key) {
+          console.log(key, value);
+       });
+     });
+
+     // To make the data available in the DOM, assign it to $scope
+     $scope.data = obj;
+     $scope.days = obj.classes;
+   
+
+   angular.forEach(obj, function(value, key) {
+          console.log('g', key, value);
+       });
+     // For three-way data bindings, bind it to the scope instead
+  //   obj.$bindTo($scope, "data");
+
+       console.log('7s', $scope.data, $scope.days);
+//$scope.days = ['Hours', 'Poniedziałek', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
   $scope.today = function() {
     $scope.dt = new Date();
