@@ -285,7 +285,7 @@ ul {
   margin-top: 0;
   margin-bottom: 80px;
   text-transform: capitalize;
-  background-image: -webkit-linear-gradient(left, #2cc99d 30%, #2989d8, #00FCA3 75%);
+  background-image: -webkit-linear-gradient(left,#76EAD0 33%, #2989d8,#FF6CE3 65%);
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
