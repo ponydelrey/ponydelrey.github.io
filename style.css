@@ -28,6 +28,16 @@ h4 {
   padding: 10 10 10 10;
 }
 
+.hour:hover {
+background-color: #54E5BF;
+cursor: pointer;
+ transform: scale(1.2, 1.2);
+ -moz-transform: scale(1.2, 1.2);
+-ms-transform: scale(1.2, 1.2);
+-webkit-transform: scale(1.2, 1.2);
+-o-transform: scale(1.2, 1.2);
+}
+
 .gray {
   margin-left: -100px;
   min-width: 1160px !important;
@@ -243,13 +253,16 @@ ul {
 }
 
 .main h1 {
-  color: #54E5BF;
   font-weight: 600;
   font-family: youregone;
   font-size: 70px;
   margin-top: 0;
   margin-bottom: 80px;
   text-transform: capitalize;
+  background-image: -webkit-linear-gradient(left, #2cc99d 30%, #2989d8, #00FCA3 75%);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .supporting {

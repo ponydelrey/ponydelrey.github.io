@@ -8,8 +8,8 @@ angular.module('BBApp').controller('galleryCtrl', function ($scope) {
   $scope.addSlide = function() {
     var newWidth = 400 + slides.length + 1;
     slides.push({
-      image: 'modules/gallery/img/BBA2.jpg',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      image: ['modules/gallery/img/kk.jpg', 'modules/gallery/img/kk2.jpg', 'modules/gallery/img/kk3.jpg', 'modules/gallery/img/kk4.jpg', 'modules/gallery/img/kk5.jpg', 'modules/gallery/img/kk6.jpg', 'modules/gallery/img/kk7.jpg' ][slides.length % 7],
+      text: ['Nice one','Awesome','That is cool','I love that', 'Nice one', 'Nice one', 'Nice one'][slides.length % 7],
       id: currIndex++
     }
     );
@@ -20,7 +20,7 @@ angular.module('BBApp').controller('galleryCtrl', function ($scope) {
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 7; i++) {
     $scope.addSlide();
   }
 

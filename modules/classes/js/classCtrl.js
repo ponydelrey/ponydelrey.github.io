@@ -15,7 +15,6 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
      // To make the data available in the DOM, assign it to $scope
      $scope.data = obj;
      $scope.days = obj.classes;
-   
 
    angular.forEach(obj, function(value, key) {
           console.log('g', key, value);
