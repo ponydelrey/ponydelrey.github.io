@@ -2,7 +2,7 @@ var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap', 'ngAn
 
 BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 BBApp.constant('moment', moment);
-console.log(moment, 'mom');
+
 
 BBApp.config(function($routeProvider){
     $routeProvider
