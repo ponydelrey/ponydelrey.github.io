@@ -43,6 +43,7 @@ cursor: pointer;
 }
 
 .gray {
+  padding-top: 50px;
   margin-left: -100px;
   min-width: 1160px !important;
   min-height: 500px;
