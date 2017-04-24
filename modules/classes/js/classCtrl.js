@@ -22,9 +22,6 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
      // For three-way data bindings, bind it to the scope instead
   //   obj.$bindTo($scope, "data");
 
-       console.log('7s', $scope.data, $scope.days);
-//$scope.days = ['Hours', 'Poniedziałek', 'tuesday', 'wednesday', 'thursday', 'friday'];
-
   $scope.today = function() {
     $scope.dt = new Date();
   };

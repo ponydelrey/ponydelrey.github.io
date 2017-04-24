@@ -62,7 +62,7 @@ cursor: pointer;
   border-right: 1px solid #959795;
   width: 140px;
   height: 330px;
-  background-color:#54E5BF;
+
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   display: inline-block;
   padding: 10 50 10 10;
