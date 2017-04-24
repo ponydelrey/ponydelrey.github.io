@@ -35,11 +35,11 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
   $scope.addWeek = function() {
    startDate = startDate.add(7, 'day');
-   finishDate = finishDate.add(5, 'day');
+   finishDate = finishDate.add(12, 'day');
 
   $scope.from = startDate.format('DD.MM');
   $scope.to = finishDate.format('DD.MM');
-  $scope.later = true;
+  //$scope.later = true;
 
   };
 
