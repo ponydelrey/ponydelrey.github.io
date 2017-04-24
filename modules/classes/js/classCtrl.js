@@ -26,16 +26,16 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
   var day = moment().day();
   var startDate = moment().subtract(day-1, 'day');
-  var finishDate = moment().add(5, 'day');
+  var finishDate = moment().add(4, 'day');
 
   $scope.from = startDate.format('DD.MM');
   $scope.to = finishDate.format('DD.MM');
-  $scope.later = false;
+
 
 
   $scope.addWeek = function() {
    startDate = startDate.add(7, 'day');
-   finishDate = finishDate.add(12, 'day');
+   finishDate = finishDate.add(7, 'day');
 
   $scope.from = startDate.format('DD.MM');
   $scope.to = finishDate.format('DD.MM');
