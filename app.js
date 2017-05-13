@@ -62,7 +62,7 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
         $scope.user.userName = "";
         console.log('user and scope user:', $scope.userName);
         var ref = firebase.database();
-        console.log('database .',ref);
+        //console.log('database .',ref);
         $scope.showSignPanel = true;
         $scope.hideSignPanel = false;
          $location.path('/#');
