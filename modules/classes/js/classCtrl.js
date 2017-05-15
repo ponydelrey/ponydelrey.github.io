@@ -25,6 +25,7 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
   
 
   var day = moment().day();
+  console.log('d', day);
   var startDate = moment().subtract(day-1, 'day'); 
   var finishDate = moment().add(5-day, 'day');
 
@@ -44,27 +45,31 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
   };
 
   $scope.addMe = function(className, day) {
-    var unix= moment().subtract(day, 'day').format('YYYYMMDD');
-    var resDay = moment().subtract(day, 'day').format('DD.MM.YYYY');
 
-    if(Object.keys(obj[unix][className]).length>4){
+    if (day ==1){ 
+      var unix = startDate.clone().format('YYYYMMDD');
+    }else{
+      var unix= startDate.clone().add(day, 'day').format('YYYYMMDD');
+    }
+    var createEntry;
+
+    if(unix in obj){
+      createEntry = true
+    }
+
+   // if(Object.keys(obj[unix]Object.keys(obj[unix][className]).length>4){
+    if(createEntry){
+      if(Object.keys(obj[unix][className]).length>4){
       window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy')
     }else{
 
-         var user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser;
    var email = user.email;
 
      var ref1 = firebase.database().ref().child(unix + '/' + className);
 
 var newUserRef = ref1.push(email);
-
-//window.alert("Zostałeś wpisany na zajęcia " + className + " w dniu " +resDay + " Dziękujemy!");
-
-console.log('obj', Object.keys(obj[unix][className]).length, unix);
-    }
-
-
-
+alert('Zostalas wpisana na zajecia' + unix+ '. Dziekujemy')}}
   }
 
   $scope.options = {

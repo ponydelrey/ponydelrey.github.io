@@ -4,11 +4,11 @@
     <p><i ng-show="later" ng-click="sub()" class="fa fa-chevron-left" aria-hidden="true"></i> {{from}} - {{to}} <i ng-click="addWeek()" class="fa fa-chevron-right" aria-hidden="true"></i></p>
     <div class="card" ng-repeat="x in data.days">
     <p class="day"> {{x.name}}</p>
-       <div class="hour" ng-mouseenter="learnmore=true" ng-mouseleave="learnmore=false" ng-click="addMe(x['10'], x)"> <h4>{{x['10']}}  </h4> </div>
+       <div class="hour" ng-mouseenter="learnmore=true" ng-mouseleave="learnmore=false" ng-click="addMe(x['10'], x['day'])"> <h4>{{x['10']}}  </h4> </div>
  <!--         <h4 ng-show="learnmore"> O zajęciach _</h4></div>  -->    
-     <div class="hour" ng-click="addMe(x['11'], x)"> <h4>{{x['11']}}</h4></div>
-        <div class="hour"ng-click="addMe(x['12'], x)"> <h4>{{x['12']}}</h4></div>
-        <div class="hour" ng-click="addMe(x['13'], x)"><h4>{{x['13']}}</h4></div>
+     <div class="hour" ng-click="addMe(x['11'], x['day'])"> <h4>{{x['11']}}</h4></div>
+        <div class="hour"ng-click="addMe(x['12'], x['day'])"> <h4>{{x['12']}}</h4></div>
+        <div class="hour" ng-click="addMe(x['13'],x['day'])"><h4>{{x['13']}}</h4></div>
     </div>
 </div>
 </div>
