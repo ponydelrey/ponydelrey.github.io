@@ -38,6 +38,7 @@ angular.module('BBApp').controller('galleryCtrl', function ($scope) {
       indexes[i] = i;
     }
     return shuffle(indexes);
+    return shit;
   }
 
   // http://stackoverflow.com/questions/962802#962890

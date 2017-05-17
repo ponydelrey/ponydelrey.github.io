@@ -46,30 +46,51 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
   $scope.addMe = function(className, day) {
 
+    signToClass = function(){
+      var user = firebase.auth().currentUser;
+      var email = user.email;
+
+      var refClass = firebase.database().ref().child(unix + '/' + className);
+      var newUserRef = refClass.push(email);
+
+
+      var atIndex = email.indexOf("@");
+      var dotIndex = email.indexOf('.');
+      var trimmedMail = email.substring(0,atIndex);
+      var end = email.substring(atIndex+1,dotIndex);
+      var userIdentifier = trimmedMail + end;
+      var refUserList = firebase.database().ref().child('users' + '/' + userIdentifier);
+      var newUserRef = refUserList.push(unix + '+' + className);
+      
+      alert('Zostalas wpisana na zajecia' + unix+ '. Dziekujemy!')
+
+};
+
     if (day ==1){ 
       var unix = startDate.clone().format('YYYYMMDD');
     }else{
-      var unix= startDate.clone().add(day, 'day').format('YYYYMMDD');
-    }
-    var createEntry;
-
-    if(unix in obj){
-      createEntry = true
+      var unix= startDate.clone().add(day-1, 'day').format('YYYYMMDD');
     }
 
-   // if(Object.keys(obj[unix]Object.keys(obj[unix][className]).length>4){
-    if(createEntry){
-      if(Object.keys(obj[unix][className]).length>4){
-      window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy')
-    }else{
+    console.log('unix', unix, day);
 
-  var user = firebase.auth().currentUser;
-   var email = user.email;
+    if(!firebase.auth().currentUser){
+      window.alert("Aby wpisać się na zajęcia, musisz być zalogowana!")
+    }
+    else{
 
-     var ref1 = firebase.database().ref().child(unix + '/' + className);
+          if((unix in obj) && (className in obj[unix])) {
+      if(Object.keys(obj[unix][className]).length>2){
+      window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy!')
+      }else{
+      signToClass();
+    }
+       }else{
+        signToClass();
+    }
 
-var newUserRef = ref1.push(email);
-alert('Zostalas wpisana na zajecia' + unix+ '. Dziekujemy')}}
+    }
+
   }
 
   $scope.options = {

@@ -68,11 +68,6 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
          $location.path('/#');
     	}
     }
-	
-
-	console.log('were in  controller', $scope.hideSignPanel, $scope.showSignPanel);
-    console.log('db so ', firebase.database().ref('classes'));
-
 
     firebase.auth().onAuthStateChanged(function(user) {
     	if(user){
