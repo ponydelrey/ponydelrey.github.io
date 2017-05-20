@@ -44,14 +44,13 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
   };
 
-  $scope.addMe = function(className, day) {
+  $scope.addMe = function(className, day, hour) {
 
-    signToClass = function(){
       var user = firebase.auth().currentUser;
       var email = user.email;
+      var alreadyInList;
 
-      var refClass = firebase.database().ref().child(unix + '/' + className);
-      var newUserRef = refClass.push(email);
+
 
 
       var atIndex = email.indexOf("@");
@@ -59,17 +58,23 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
       var trimmedMail = email.substring(0,atIndex);
       var end = email.substring(atIndex+1,dotIndex);
       var userIdentifier = trimmedMail + end;
+
+    signToClass = function(){
+
+
+      var refClass = firebase.database().ref().child(unix + '/' + className);
+      var newUserRef = refClass.push(userIdentifier);
       var refUserList = firebase.database().ref().child('users' + '/' + userIdentifier);
-      var newUserRef = refUserList.push(unix + '+' + className);
+      var newUserRef = refUserList.push(unix + ' ' +hour+' ' +className);
       
-      alert('Zostalas wpisana na zajecia' + unix+ '. Dziekujemy!')
+      alert('Zostalas wpisana na zajecia ' + unix+ '. Dziekujemy')
 
 };
 
     if (day ==1){ 
-      var unix = startDate.clone().format('YYYYMMDD');
+      var unix = startDate.clone().format('YYYY-MM-DD');
     }else{
-      var unix= startDate.clone().add(day-1, 'day').format('YYYYMMDD');
+      var unix= startDate.clone().add(day-1, 'day').format('YYYY-MM-DD');
     }
 
     console.log('unix', unix, day);
@@ -79,11 +84,22 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
     }
     else{
 
-          if((unix in obj) && (className in obj[unix])) {
+
+    if((unix in obj) && (className in obj[unix])) {
       if(Object.keys(obj[unix][className]).length>2){
       window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy!')
       }else{
-      signToClass();
+        for (key in obj[unix][className]) {
+            if (obj[unix][className][key]==userIdentifier){
+              alreadyInList = true
+            }
+          }
+          if(!alreadyInList){
+                  signToClass();
+          }else{
+            window.alert('Przepraszamy, jesteś już na liście uczestników')
+          }
+
     }
        }else{
         signToClass();
