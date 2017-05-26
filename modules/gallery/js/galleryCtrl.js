@@ -9,7 +9,7 @@ angular.module('BBApp').controller('galleryCtrl', function ($scope) {
     var newWidth = 400 + slides.length + 1;
     slides.push({
       image: ['modules/gallery/img/kk.jpg', 'modules/gallery/img/kk2.jpg', 'modules/gallery/img/kk3.jpg', 'modules/gallery/img/kk4.jpg', 'modules/gallery/img/kk5.jpg', 'modules/gallery/img/kk6.jpg', 'modules/gallery/img/kk7.jpg' ][slides.length % 7],
-      text: ['Nice one','Awesome','That is cool','I love that', 'Nice one', 'Nice one', 'Nice one'][slides.length % 7],
+      text: [' ',' ',' ',' ', ' ', ' ', ' '][slides.length % 7],
       id: currIndex++
     }
     );
