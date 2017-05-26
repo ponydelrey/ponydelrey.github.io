@@ -16,9 +16,6 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
      $scope.data = obj;
      $scope.days = obj.classes;
 
-   angular.forEach(obj, function(value, key) {
-          console.log('g', key, value);
-       });
      // For three-way data bindings, bind it to the scope instead
   //   obj.$bindTo($scope, "data");
 

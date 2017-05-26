@@ -23,7 +23,7 @@
   <script src="modules/news/js/postCtrl.js"></script>
   <script src="modules/wear/js/wearCtrl.js"></script>
   <script src="modules/wear/js/wearDirective.js"></script>
-  <script src="modules/wear/js/wearService.js"></script>
+  <script src="modules/manage/js/manageCtrl.js"></script>
   <script> function myFunction() {
     console.log('check');
     var x = document.getElementById("myNav");
@@ -65,7 +65,8 @@
           <li><a href="#classes"> Zajęcia </a></li>
           <li><a href ="#gallery"> {{ my }} </a></li>
           <li><a href ="#post"> Mój plan </a></li>
-          <li><a href ="#wear">WonderWear </a></li>
+          <li ng-hide="admin"><a href ="#wear">WonderWear </a></li>
+          <li ng-show="admin"><a href ="#manage">Zarządzaj </a></li>
         </ul>
           <ul class="pull-right">
             <li><a href="#" ng-show="hideSignPanel" ng-bind="user.userName">  </a></li>

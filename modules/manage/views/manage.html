@@ -1,0 +1,10 @@
+<div ui-if="myArr.length" class="training" ng-repeat="date in data track by $index"> 
+{{ks[$index]}} Number of users: 	{{date}} <i class="fa fa-trash-o pull-right" ng-click="remove($index, date)" aria-hidden="true">
+ 
+</i> </div>
+<!-- 
+					<div  ng-repeat="dd in ks track by $index" class="col-xs-6 col-md-3 graycard day">
+            
+                        <a href="#">{{dd}}</a> <br>   <a href="#">{{data[$index]}}</a> <br>
+                    </div>
+ -->

@@ -34,6 +34,10 @@ BBApp.config(function($routeProvider){
             templateUrl: 'modules/news/views/post.html',
             controller: 'postCtrl'
         })
+        .when('/manage', {
+            templateUrl: 'modules/manage/views/manage.html',
+            controller: 'manageCtrl'
+        })
         .otherwise({redirectTo : '/'})
 
 });
@@ -74,10 +78,13 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
     		console.log('changed state');
     		$scope.user = user;
     		$scope.user.userName = user.email;
-    		$http.get("http://aerialhoop-67936.firebaseio.com/classes.json").then(function(res) {
-    console.log('x',res);
-});
-    		$scope.showSignPanel = false;
+
+            if (user.email == 'ann@gmail.com'){
+                $scope.admin = true;
+                console.log('welcome, admin');
+            }
+
+        	$scope.showSignPanel = false;
     		$scope.hideSignPanel = true;
             $scope.$apply();
 
