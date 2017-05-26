@@ -51,7 +51,6 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
 
             var date = data.substring(0, 10);
             var training = data.substring(17, data.length);
-            console.log('training2', training);
 
            var refToRem = firebase.database().ref().child('users/' + userIdentifier+ '/'+$scope.keys[i]);
            var objRem = $firebaseObject(refToRem);
@@ -73,15 +72,11 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
           angular.forEach(objClasses, function(v, k) {
             console.log('k v', k, v)
             if (v == userIdentifier){
-            console.log('caught key');
             keyToRem=k;
-
             var turboString = date +'/' + training + '/' + keyToRem;
-            console.log('turbo1', turboString, 'ccc', data);
             var refClassToRem = firebase.database().ref().child(date+ '/'+ training +'/'+keyToRem);
             var objClassRem = $firebaseObject(refClassToRem);
             objClassRem.$remove().then(function(ref) {
-                console.log('hyhy');
             }, function(error) {
             console.log("Error:", error);
             });

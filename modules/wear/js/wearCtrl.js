@@ -29,8 +29,30 @@ $scope.bras = $scope.arr;
 $scope.heels = $scope.arr2;
 
 
-$scope.upload = function(){
+$scope.buy = function(product){
 
+     firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+      var user = firebase.auth().currentUser;
+      var email = user.email;
+      var alreadyInList;
+
+
+      var atIndex = email.indexOf("@");
+      var dotIndex = email.indexOf('.');
+      var trimmedMail = email.substring(0,atIndex);
+      var end = email.substring(atIndex+1,dotIndex);
+      var userIdentifier = trimmedMail + end;
+
+      var refClass = firebase.database().ref().child('users' + '/' + userIdentifier);
+      var newUserRef = refClass.push(product);
+
+      window.alert('Dziękujemy za złożenie zamówienia, informację o postępach otrzymasz drogą mailową');
+    }else{
+      window.alert("Zaloguj się, aby składać zamówienia")
+    }
+
+  });
 }
 
 

@@ -69,7 +69,7 @@
         <md-card-actions layout="row" layout-align="end center">
 
           <md-button>{{products.cena | currency: "PLN"}}</md-button>
-          <md-button><i class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
+          <md-button><i ng-click="buy(products.name)" class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
         </md-card-actions>
       </md-card>
 </div>
@@ -87,7 +87,7 @@
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
           <md-button>{{products.cena  | currency : "PLN"  }}</md-button>
-          <md-button><i class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
+          <md-button><i ng-click="buy(products.name)" class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
         </md-card-actions>
 
       </md-card>
