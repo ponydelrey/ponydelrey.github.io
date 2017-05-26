@@ -1,5 +1,5 @@
 angular.module('BBApp')
-.controller("wearCtrl", function($scope, $firebaseArray, $firebaseObject, helloService) {
+.controller("wearCtrl", function($scope, $firebaseArray, $firebaseObject) {
 
 
  var ref = firebase.database().ref().child('wear/');
@@ -47,6 +47,8 @@ $scope.buy = function(product){
       var refClass = firebase.database().ref().child('users' + '/' + userIdentifier);
       var newUserRef = refClass.push(product);
 
+      var refClass2 = firebase.database().ref().child(product);
+      var newUserRef2 = refClass2.push(userIdentifier);
       window.alert('Dziękujemy za złożenie zamówienia, informację o postępach otrzymasz drogą mailową');
     }else{
       window.alert("Zaloguj się, aby składać zamówienia")

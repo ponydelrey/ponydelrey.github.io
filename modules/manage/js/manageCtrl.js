@@ -10,6 +10,8 @@ angular.module('BBApp').controller('manageCtrl', function ($scope, $firebaseArra
      var obj = $firebaseObject(ref);
      $scope.data = [];
      $scope.ks = [];
+     $scope.products =[];
+     var forbidden = ["classes", "days", "trainers", "users", "wear"];
 
      //take an action after the data loads
      obj.$loaded().then(function() {
@@ -26,6 +28,9 @@ angular.module('BBApp').controller('manageCtrl', function ($scope, $firebaseArra
 
               });
               });
+          }else{
+
+            if (key != "classes") {$scope.products.push(key)}
           }
        });
        $scope.data.forEach(function(x) { counts[x] = (counts[x] || 0)+1; });
