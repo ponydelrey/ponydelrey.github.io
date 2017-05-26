@@ -1,35 +1,44 @@
-angular.module('BBApp').controller('registerCtrl', ['FBMSG', '$location', '$rootScope', '$scope', function (FBMSG, $location, $rootScope, $scope) {
+angular.module('BBApp')
+.controller("wearCtrl", function($scope, $firebaseArray, $firebaseObject, helloService) {
 
-  $rootScope.user;
-	var ref = new Firebase(FBMSG);
-console.log('r');
-	$scope.handleSignUp = function()  {
-        var email = $scope.email;
-        var password = $scope.password;
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-      // Sign in with email and pass.
-      // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-        // [END_EXCLUDE]
-      });
-      // [END createwithemail]
-    }
 
-}]);
+ var ref = firebase.database().ref().child('wear/');
+
+         var obj = $firebaseObject(ref);
+          $scope.arr = [];
+          $scope.arr2 = [];
+
+        //take an action after the data loads
+        obj.$loaded().then(function() {
+          //console.log("Loaded record:", obj.$id, obj.classes);
+          angular.forEach(obj, function(value, key) {
+                          if(value['typ']=='shoes'){
+                $scope.arr.push(value);
+              }else if (value['typ']=='bra'){
+                $scope.arr2.push(value);
+              }
+              angular.forEach(value, function(v, k) {
+              //console.log('v k', v, k)
+       });
+       });
+          console.log('arr', $scope.arr);
+
+     });
+
+$scope.bras = $scope.arr;
+$scope.heels = $scope.arr2;
+
+
+$scope.upload = function(){
+
+}
+
+
+   
+})
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
+  $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();
+  $mdThemingProvider.theme('dark-purple').backgroundPalette('deep-purple').dark();
+  $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+});

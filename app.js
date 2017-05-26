@@ -1,4 +1,4 @@
-var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap', 'ngAnimate']);
+var BBApp = angular.module('BBApp', ['firebase','ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngMaterial']);
 
 BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 BBApp.constant('moment', moment);

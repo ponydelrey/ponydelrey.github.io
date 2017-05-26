@@ -51,8 +51,6 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
       var alreadyInList;
 
 
-
-
       var atIndex = email.indexOf("@");
       var dotIndex = email.indexOf('.');
       var trimmedMail = email.substring(0,atIndex);
@@ -85,10 +83,12 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
     else{
 
 
-    if((unix in obj) && (className in obj[unix])) {
+    if((unix in obj) && (className in obj[unix]) && className !='-') {
       if(Object.keys(obj[unix][className]).length>2){
       window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy!')
-      }else{
+      }
+      else if  (className == '-')
+        {console.log('this is nit a class');}else{
         for (key in obj[unix][className]) {
             if (obj[unix][className][key]==userIdentifier){
               alreadyInList = true
@@ -102,7 +102,12 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
     }
        }else{
-        signToClass();
+        if (className == '-'){
+          console.log('its not a class');
+        }else {
+          signToClass();
+        }
+        
     }
 
     }

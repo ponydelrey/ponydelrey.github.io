@@ -1,7 +1,7 @@
  <div class="container-fluid">
         <div class="container-fluid">
             <div class="graynont">
-                <div class="row">
+<!--                 <div class="row">
                     <div class="col-xs-6 col-md-3 ">
                         <a href="#"><img class="img-thumbnail"
                                          src="http://d13z1xw8270sfc.cloudfront.net/origin/97014/srt083l.jpg"></a>
@@ -49,8 +49,55 @@
                         <a href="#"><img class="img-thumbnail" src="https://pierrettew.files.wordpress.com/2014/12/metalic.jpg?w=300&h=300"></a>
                         <a href="#">Add to cart </a>   <br>
                         <h5> 188€</h5></div>
-
                 </div>
-            </div>
-        </div>
+            </div> -->
 
+</div>
+</div>
+</div>
+
+<div ng-cloak >
+  <md-content class="md-padding" layout-xs="column" layout="row">
+  <div class ng-repeat="products in bras">
+      <md-card md-theme="dark-grey" md-theme-watch>
+                    <md-card-title>
+          <md-card-title-media>
+            <div class="sm-media-lg card-media">
+                <img ng-src="{{products.img}}" /></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+
+          <md-button>{{products.cena | currency: "PLN"}}</md-button>
+          <md-button><i class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
+        </md-card-actions>
+      </md-card>
+</div>
+
+</md-content>
+  <md-content class="md-padding" layout-xs="column" layout="row">
+  <div class ng-repeat="products in heels">
+      <md-card md-theme="dark-grey" md-theme-watch>
+        <md-card-title>
+          <md-card-title-media>
+            <div class="sm-media-lg card-media">
+                <img ng-src="{{products.img}}" /></div>
+                <p class='day'>  {{products.name}} </p>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>{{products.cena  | currency : "PLN"  }}</md-button>
+          <md-button><i class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
+        </md-card-actions>
+
+      </md-card>
+</div>
+
+</md-content>
+</div>
+
+
+<!--          
+                <button  type="submit" class="btn btn-default" ng-click="upload();">UP..
+                  <i class="fa fa-upload" aria-hidden="true"></i>
+                </button> -->
