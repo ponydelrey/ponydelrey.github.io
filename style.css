@@ -31,7 +31,16 @@ h4 {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10 10 10 10;
 }
+.col-sm-3{
 
+}
+
+.blacky{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+    border: solid 1px light-gray;
+    padding-bottom: 20px;
+}
 
 .training {
 margin-left: auto;
@@ -94,11 +103,27 @@ cursor: pointer;
   background-color: #979497;
 }
 
-.card {
+.cardie {
   border-top: 1px solid #454745;
   border-right: 1px solid #959795;
   width: 140px;
   height: 330px;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  display: inline-block;
+  padding: 10 50 10 10;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+
+.usercard {
+  border-top: 1px solid #454745;
+  border-right: 1px solid #959795;
+  width: 140px;
+  height: 330px;
+  z-index: 99999;
 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   display: inline-block;
