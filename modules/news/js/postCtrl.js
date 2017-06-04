@@ -89,8 +89,6 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
      });
 
 
- 
-
          $scope.keys = [];
     obj.$loaded().then(function() {
           angular.forEach(obj, function(value, key) {
