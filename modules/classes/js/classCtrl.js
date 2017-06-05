@@ -1,17 +1,18 @@
 angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray, $firebaseObject, FBMSG) {
-
+    // $scope.loaded = false;
 
      var ref = firebase.database().ref();
      var obj = $firebaseObject(ref);
-     $scope.loaded = false;
+
 
      //take an action after the data loads
      obj.$loaded().then(function() {
-      $scope.loaded = true;
+
         console.log("loaded record:", obj.$id, obj.classes);
        angular.forEach(obj, function(value, key) {
           console.log(key, value);
        });
+         $scope.loaded = true;
      });
 
      // To make the data available in the DOM, assign it to $scope
