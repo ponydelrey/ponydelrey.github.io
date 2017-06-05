@@ -95,7 +95,6 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
 
     	}
 	$scope.check = function (password) {
-    console.log(password);
 }
 
 $scope.more = function(){
