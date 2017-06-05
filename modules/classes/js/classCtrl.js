@@ -19,10 +19,11 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
      // For three-way data bindings, bind it to the scope instead
   //   obj.$bindTo($scope, "data");
 
+    $scope.back = false;
+    $scope.timesSubtracted = 0;;
   
 
   var day = moment().day();
-  console.log('d', day);
   var startDate = moment().subtract(day-1, 'day'); 
   var finishDate = moment().add(5-day, 'day');
 
@@ -32,11 +33,32 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
 
   $scope.addWeek = function() {
+  $scope.timesSubtracted = $scope.timesSubtracted + 1;
+  $scope.back = true;
    startDate = startDate.add(7, 'day');
    finishDate = finishDate.add(7, 'day');
 
   $scope.from = startDate.format('DD.MM');
   $scope.to = finishDate.format('DD.MM');
+  //$scope.later = true;
+
+  };
+
+  $scope.subtract = function() {  
+    if($scope.timesSubtracted <=0){
+      $scope.back = false;
+    }else {
+      $scope.timesSubtracted = $scope.timesSubtracted -1;
+    startDate = startDate.subtract(7, 'day');
+   finishDate = finishDate.subtract(7, 'day');
+
+  $scope.from = startDate.format('DD.MM');
+  $scope.to = finishDate.format('DD.MM');
+  if($scope.timesSubtracted <=0){
+      $scope.back = false;
+    }
+    }
+
   //$scope.later = true;
 
   };

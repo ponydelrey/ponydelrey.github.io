@@ -1,14 +1,14 @@
 <div>
 
 <div class="gray">
-    <p><i ng-show="later" ng-click="sub()" class="fa fa-chevron-left" aria-hidden="true"></i> {{from}} - {{to}} <i ng-click="addWeek()" class="fa fa-chevron-right" aria-hidden="true"></i></p>
-    <div class="cardie" ng-repeat="x in data.days">
+    <p><i ng-show="back" ng-click="subtract()" class="fa fa-chevron-left" aria-hidden="true"></i> {{from}} - {{to}} <i ng-click="addWeek()" class="fa fa-chevron-right" aria-hidden="true"></i></p>
+    <div class="cardie" ng-repeat="x in data.days track by $index">
     <p class="day"> {{x.name}}</p>
-       <div class="hour" ng-mouseenter="learnmore=true" ng-mouseleave="learnmore=false" ng-click="addMe(x['10'], x['day'], '10:00')"> <h4>{{x['10']}}  </h4> </div>
+       <div class="hour" ng-mouseenter="learnmore=true" ng-mouseleave="learnmore=false" ng-click="addMe(x['17'], x['day'], '17:00')"> <h4>{{x['17']}}  </h4> </div>
  <!--         <h4 ng-show="learnmore"> O zajęciach _</h4></div>  -->    
-     <div class="hour" ng-click="addMe(x['11'], x['day'], '11:00')"> <h4>{{x['11']}}</h4></div>
-        <div class="hour"ng-click="addMe(x['12'], x['day'], '12:00')"> <h4>{{x['12']}}</h4></div>
-        <div class="hour" ng-click="addMe(x['13'],x['day'], '13:00')"><h4>{{x['13']}}</h4></div>
+     <div class="hour" ng-click="addMe(x['18'], x['day'], '18:00')"> <h4>{{x['18']}}</h4></div>
+        <div class="hour"ng-click="addMe(x['19'], x['day'], '19:00')"> <h4>{{x['19']}}</h4></div>
+        <div class="hour" ng-click="addMe(x['20'],x['day'], '20:00')"><h4>{{x['20']}}</h4></div>
     </div>
 </div>
 </div>

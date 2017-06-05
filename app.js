@@ -34,6 +34,10 @@ BBApp.config(function($routeProvider){
             templateUrl: 'modules/news/views/post.html',
             controller: 'postCtrl'
         })
+        .when('/ae', {
+            templateUrl: 'modules/news/views/ae.html',
+            controller: ''
+        })
         .when('/manage', {
             templateUrl: 'modules/manage/views/manage.html',
             controller: 'manageCtrl'
@@ -48,6 +52,8 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
 	
     $scope.user = {};
     $scope.showSignPanel = true;
+    $scope.more = true;
+    $scope.sup = false;
    
 
 
@@ -64,7 +70,6 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
         // [START signout]
         firebase.auth().signOut();
         $scope.user.userName = "";
-        console.log('user and scope user:', $scope.userName);
         var ref = firebase.database();
         //console.log('database .',ref);
         $scope.showSignPanel = true;
@@ -91,6 +96,11 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
     	}
 	$scope.check = function (password) {
     console.log(password);
+}
+
+$scope.more = function(){
+ $scope.more = !$scope.more;
+ $scope.sup = !$scope.sup;
 }
 });
 

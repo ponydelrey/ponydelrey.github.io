@@ -2,27 +2,32 @@ angular.module('BBApp').controller('registerCtrl', ['FBMSG', '$location', '$root
 
   $rootScope.user;
 	var ref = new Firebase(FBMSG);
-console.log('r');
+
+
 	$scope.handleSignUp = function()  {
         var email = $scope.email;
         var password = $scope.password;
+        var passConfirm = $scope.passwordconfirm;
       if (email.length < 4) {
-        alert('Please enter an email address.');
+        alert('Proszę wprowadzić poprawny adres e-mail.');
         return;
       }
       if (password.length < 4) {
-        alert('Please enter a password.');
+        alert('Hasło musi mieć więcej niż 4 znaki.');
         return;
       }
-      // Sign in with email and pass.
-      // [START createwithemail]
+      if( password != passConfirm){
+        alert("Hasła nie zgadzają się.");
+        return;
+      }
+
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         // [START_EXCLUDE]
         if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
+          alert('Hasło jest zbyt słabe. Spróbuj dodać znaki specjalne/cyfry.');
         } else {
           alert(errorMessage);
         }
@@ -30,6 +35,7 @@ console.log('r');
         // [END_EXCLUDE]
       });
       // [END createwithemail]
+      $location.path('/#');
     }
 
 }]);
