@@ -3,9 +3,11 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
 
      var ref = firebase.database().ref();
      var obj = $firebaseObject(ref);
+     $scope.loaded = false;
 
      //take an action after the data loads
      obj.$loaded().then(function() {
+      $scope.loaded = true;
         console.log("loaded record:", obj.$id, obj.classes);
        angular.forEach(obj, function(value, key) {
           console.log(key, value);
