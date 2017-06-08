@@ -47,33 +47,39 @@
         	<div class="blacky">
           <h4>{{data[$index].key}}</h4>
            <p class="day">{{data[$index].k}}</p>
-           <h5 ng-repeat="person in data[$index].kk">{{person}}</h5>
+           <h5 ng-repeat="person in data[$index].kk track by $index">{{person}}</h5>
+           <a id="rmv"> Odwołaj zajęcia<i class="fa fa-times" aria-hidden="true"></i> </a>
         </div>
          </div>
         <div class="col-sm-3">
         	<div class="blacky">
           <h4>{{data[$index + 1].key}}</h4>
           <p class="day">{{data[$index +1].k}}</p>
-           <h6 ng-repeat="person in data[$index +1 ].kk">{{person}}</h6>
+           <h6 ng-repeat="person in data[$index +1 ].kk track by $index">{{person}}</h6>
+            <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
          </div>
         <div class="col-sm-3">
         	<div class="blacky">
           <h4>{{ data[$index + 2].key}}</h4>
            <p class="day">{{data[$index+2].k}}</p>
-           <h6 ng-repeat="person in data[$index +2 ].kk">{{person}}</h6>
+           <h6 ng-repeat="person in data[$index +2 ].kk track by $index">{{person}}</h6>
+            <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
          </div>
        <div class="col-sm-3">
        	<div class="blacky">
           <h4>{{ data[$index + 3].key}}</h4>
      <p class="day">{{data[$index+3].k}}</p>
-     <h6 ng-repeat="person in data[$index +3 ].kk">{{person}}</h6>
+     <h6 ng-repeat="person in data[$index +3 ].kk track by $index">{{person}}</h6>
+      <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i> </a>
         </div>
          </div>
       </div>
     </div>
-
-<div class="cardie" ng-repeat="pr in products">
-	{{pr}}
+<div class="gray">
+<div ng-repeat="pr in products">
+		<p> {{pr.key}}</br> </p>
+  <h6 ng-repeat="pp in pr.kk track by $index">{{pp}}</h6>
+</div>
 </div>

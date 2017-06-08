@@ -84,9 +84,11 @@ BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http
     		$scope.user = user;
     		$scope.user.userName = user.email;
 
-            if (user.email == 'ann@gmail.com'){
+            if (user.email === 'ann@gmail.com'){
                 $scope.admin = true;
                 console.log('welcome, admin');
+            }else {
+                $scope.admin = false;
             }
 
         	$scope.showSignPanel = false;
@@ -107,3 +109,6 @@ $scope.my = "Galeria"
 
 
 }])
+
+
+

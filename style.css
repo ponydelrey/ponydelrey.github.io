@@ -30,12 +30,12 @@ margin-bottom: 40px;
     padding: 10px 20px 10px 20px;
     background-color: #000;
 }
-#res{
+#res, #rmv{
     text-decoration: none;
-    text-transform: uppercase;
     color: #54E5BF;
     padding: 10px 20px 10px 20px;
     background-color: #000;
+       border: solid   color: #54E5BF 1px;
 }
 #res, #reg, #logg:hover{
     cursor: pointer;
@@ -46,7 +46,7 @@ margin-bottom: 40px;
     background-color: #333;
          border: solid   color: #54E5BF; 1px;
 }
-#logg, #reg{
+#logg, #reg, #res{
       border: solid   color: #54E5BF; 1px;
     text-decoration: none;
     text-transform: uppercase;
@@ -79,6 +79,10 @@ h4 {
 /* The finishing CSS styles for the enter animation */
 .ng-enter.ng-enter-active {
   opacity:1;
+}
+
+ol.li{
+  color: #454745;
 }
 
 .animate-show,
@@ -505,7 +509,13 @@ ul {
   background-color: #333;
   color: #fff;
   padding: 30px 0;
-}
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    }
 
 .footer p {
   font-family: 'Raleway', sans-serif;

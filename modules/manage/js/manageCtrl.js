@@ -38,19 +38,25 @@ angular.module('BBApp').controller('manageCtrl', function ($scope, $firebaseArra
             //   });
                        var miniarr = [];
 
+
             angular.forEach(value, function(v, k) { 
               angular.forEach(v, function(vv, kk) { 
-
-                   miniarr.push(vv);
-                
+                   miniarr.push(vv);   
+                   console.log('vv', vv);       
                    //$scope.ks.indexOf(k+key) === -1 ? $scope.ks.push(k+"  " +key) : console.log("This item already exists");
               });
                  $scope.data.push({'key': key, 'k': k, 'kk': miniarr});
               });
 
           }else{
+            if (key != "classes" && key!= "days" && key!= "users" && key!= "products" && key!="trainers" && key!="wear") {  //$scope.products.push(key + value)
+              var miniarr2 = [];
+              angular.forEach(value, function(v, k) { 
+                miniarr2.push(v);
+              });
+                $scope.products.push({'key': key, 'kk': miniarr2});
 
-            if (key != "classes") {$scope.products.push(key)}
+            }
           }
        });
   $scope.rowsCount = [];

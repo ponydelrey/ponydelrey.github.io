@@ -74,6 +74,7 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
             if (v == userIdentifier){
             keyToRem=k;
             var turboString = date +'/' + training + '/' + keyToRem;
+            console.log(turboString);
             var refClassToRem = firebase.database().ref().child(date+ '/'+ training +'/'+keyToRem);
             var objClassRem = $firebaseObject(refClassToRem);
             objClassRem.$remove().then(function(ref) {
