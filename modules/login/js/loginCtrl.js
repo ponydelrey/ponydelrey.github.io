@@ -2,6 +2,8 @@ angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$location','$scope', 
 
 	var ref = new Firebase(FBMSG);
 
+
+
   $scope.resetPass = function(){
   var email = $scope.email;
 
@@ -31,7 +33,7 @@ angular.module('BBApp').controller('loginCtrl', ['FBMSG', '$location','$scope', 
         });
 
        
-        $location.path('/#');
+        $location.path('/');
 	}
 
 }]);

@@ -4,7 +4,7 @@ BBApp.constant("FBMSG", "https://aerialhoop-67936.firebaseio.com");
 BBApp.constant('moment', moment);
 
 
-BBApp.config(function($routeProvider){
+BBApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
     $routeProvider
         .when('/', {
             templateUrl: 'home.html',
@@ -38,18 +38,27 @@ BBApp.config(function($routeProvider){
             templateUrl: 'modules/news/views/ae.html',
             controller: ''
         })
+        .when('/pd', {
+            templateUrl: 'modules/news/views/pd.html',
+            controller: ''
+        })
+        .when('/dev', {
+            templateUrl: 'modules/news/views/dev.html',
+            controller: ''
+        })
         .when('/manage', {
             templateUrl: 'modules/manage/views/manage.html',
             controller: 'manageCtrl'
         })
         .otherwise({redirectTo : '/'})
 
-});
+        $locationProvider.html5Mode(true);
+
+}]);
 
 
 BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http', function ($scope, $rootScope, $location, $http) {
-	
-	
+
     $scope.user = {};
     $scope.showSignPanel = true;
     $scope.more = true;

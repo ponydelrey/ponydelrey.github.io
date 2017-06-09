@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"  data-ng-app="BBApp" class="no-js">
 <head>
+  <base href="/">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My AngularJS App</title>
@@ -66,17 +67,17 @@
     <div data-ng-controller="MainController" class="header">
         <ul class="nav-left" id="myNav">
           <li><a class="icon" href="" onclick="myFunction()">&#9776;</a></li>
-          <li><a href="#classes"> Zajęcia </a></li>
-          <li><a href ="#gallery"> {{ my }} </a></li>
-          <li><a href ="#post"> Mój plan </a></li>
-          <li ng-hide="admin"><a href ="#wear">WonderWear </a></li>
-          <li ng-show="admin"><a href ="#manage">Zarządzaj </a></li>
+          <li><a href="classes"> Zajęcia </a></li>
+          <li><a href ="gallery"> {{ my }} </a></li>
+          <li><a href ="post"> Mój plan </a></li>
+          <li ng-hide="admin"><a href ="wear">WonderWear </a></li>
+          <li ng-show="admin"><a href ="manage">Zarządzaj </a></li>
         </ul>
           <ul class="pull-right">
-            <li><a href="#" ng-show="hideSignPanel" ng-bind="user.userName">  </a></li>
-            <li> <a href="#" id="logout" ng-show="hideSignPanel" ng-click="logout()"> Logout </a> </li>
-           <li><a href="#register" ng-show="showSignPanel"><span class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
-          <li><a id='log'  ng-show="showSignPanel" href="#login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+            <li><a href="" ng-show="hideSignPanel" ng-bind="user.userName">  </a></li>
+            <li> <a href="" id="logout" ng-show="hideSignPanel" ng-click="logout()"> Logout </a> </li>
+           <li><a href="register" ng-show="showSignPanel"><span class="glyphicon glyphicon-user"></span>Zarejestruj</a></li>
+          <li><a id='log'  ng-show="showSignPanel" href="login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
       </ul>
 
 </div>
