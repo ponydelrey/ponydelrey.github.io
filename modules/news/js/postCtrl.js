@@ -9,7 +9,7 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
       myClass: '=myClass'
     },
     template: '<div ui-if="myArr.length" class="training" ng-repeat="date in data track by $index"> {{date}} <i class="fa fa-trash-o pull-right" ng-click="remove($index, date)" aria-hidden="true"></i> </div>',
-    controller: function($scope, $firebaseArray, $firebaseObject, FBMSG){
+    controller: function($scope, $firebaseArray, $firebaseObject, FBMSG, $location){
        $scope.remove = function(){
           console.log('lets rwwwemove sometih');
         }
@@ -107,8 +107,11 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
  
 
   } else {
-    window.alert('Something went wrong!')
+    window.alert('Aby zobaczyć swój plan, musisz się zalogować');
+    event.preventDefault();
+
   }
+    $location.path("/login");
 });
 
     }
