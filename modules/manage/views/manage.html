@@ -1,85 +1,30 @@
-<!-- <div ui-if="myArr.length" class="training" ng-repeat="date in data track by $index"> 
-{{ks[$index]}} Number of users: 	{{date}} <i class="fa fa-trash-o pull-right" ng-click="remove($index, date)" aria-hidden="true">
- 
-</i> </div>
- -->
-
-
-
-<!-- 
-<div class="card-group">
-  <div class="card" >
-    <div class="card-block">
-      <h4 class="card-title"> {{date.key}} <br> </br> {{date.k}}</h4>
-      <p class="card-text">Number of users!!: {{date.kk.length}} </p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted" ng-repeat="person in date.kk">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
- -->
-
-
-<!-- 
-<div ng-cloak >
-  <md-content class="md-padding" layout-xs="column" layout="row">
-  <div class ng-repeat="date in data track by $index" 
-      <md-card md-theme="dark-grey" md-theme-watch>
-               {{date.key}}   </br> {{date.k}}  <md-card-title>
-          <md-card-title-media>
-            <div class="sm-media-lg card-media">
-          </md-card-title-media>
-        </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-
-          <md-button ng-repeat="person in date.kk"> {{person}}</md-button>
-        </md-card-actions>
-      </md-card>
-</div>
-</md-content>
-</div>
-</div> -->
-
 <div class="container">
-      <div class="row" ng-repeat="x in rowsCount">
+
+  <div class="row">
+    <div  ng-hide="loaded">
+    <img src="./images/loading.gif" class="ajax-loader"/>
+</div>
+    <div ng-repeat="product in data track by $index">
+        <div class="clearfix" ng-if="$index % 4 == 0"></div>
         <div class="col-sm-3">
-        	<div class="blacky">
-          <h4>{{data[$index].key}}</h4>
+          <div class="blacky">
+                      <h4>{{data[$index].key}}</h4>
            <p class="day">{{data[$index].k}}</p>
            <h5 ng-repeat="person in data[$index].kk track by $index">{{person}}</h5>
-           <a id="rmv"> Odwołaj zajęcia<i class="fa fa-times" aria-hidden="true"></i> </a>
+           <a  ng-click="remove(data[$index].key, data[$index].k)" id="rmv"> Odwołaj zajęcia  <i class="fa fa-times" aria-hidden="true"></i> </a>
         </div>
-         </div>
-        <div class="col-sm-3">
-        	<div class="blacky">
-          <h4>{{data[$index + 1].key}}</h4>
-          <p class="day">{{data[$index +1].k}}</p>
-           <h6 ng-repeat="person in data[$index +1 ].kk track by $index">{{person}}</h6>
-            <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
-         </div>
-        <div class="col-sm-3">
-        	<div class="blacky">
-          <h4>{{ data[$index + 2].key}}</h4>
-           <p class="day">{{data[$index+2].k}}</p>
-           <h6 ng-repeat="person in data[$index +2 ].kk track by $index">{{person}}</h6>
-            <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i></a>
-        </div>
-         </div>
-       <div class="col-sm-3">
-       	<div class="blacky">
-          <h4>{{ data[$index + 3].key}}</h4>
-     <p class="day">{{data[$index+3].k}}</p>
-     <h6 ng-repeat="person in data[$index +3 ].kk track by $index">{{person}}</h6>
-      <a id="rmv"> Odwołaj zajęcia <i class="fa fa-times" aria-hidden="true"></i> </a>
-        </div>
-         </div>
-      </div>
     </div>
+</div>
+
 <div class="gray">
-<div ng-repeat="pr in products">
-		<p> {{pr.key}}</br> </p>
-  <h6 ng-repeat="pp in pr.kk track by $index">{{pp}}</h6>
-</div>
-</div>
+<div ng-repeat="pr in products track by $index">
+          <div class="clearfix" ng-if="$index % 4 == 0"></div>
+            <div class="col-sm-3">
+              <div class="blacky"></br>
+		            <p class="day"> {{pr.key}}</br> </p>
+                <h6 ng-repeat="pp in pr.kk track by $index">{{pp}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>

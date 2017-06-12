@@ -6,7 +6,6 @@ html, body {
 /*background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;*/
 background: url("http://www.scott-eaton.com/wp/wp-content/BodiesInMotion-AerialHoop.jpg")no-repeat center center fixed;
 
-
  background-size:cover;
  font-family: 'Helvetica';
 }
@@ -14,7 +13,9 @@ background: url("http://www.scott-eaton.com/wp/wp-content/BodiesInMotion-AerialH
 p.day {
 margin-bottom: 40px;
 }
-
+.row {
+  margin-bottom: 20px;
+}
 .btn {
   background-color: #000;
 }
@@ -64,6 +65,12 @@ h4 {
     font-family: Raleway;
   font-weight: 100;
   font-size: 14px;
+}
+
+.article {
+      font-family: Raleway;
+      color: #000;
+      font-size: 14px;
 }
 
 .ajax-loader {
@@ -421,7 +428,7 @@ ul {
 }
 .pull-right a {
   margin-top: 20px;
-  width: 160px;
+  width: 200px;
 }
 @media screen and (max-width:680px) {
   .pull-right{
@@ -447,6 +454,7 @@ ul {
   position: relative;
   top: 80px;
   text-align: center;
+  margin-bottom: 150px;
 }
 
 .main h1 {
@@ -531,7 +539,8 @@ ul {
   font-size: 11px;
 }
 #logout {
-  margin-left: 20px;
+  text-align: -webkit-right;
+  margin-right: 20px;
 }
 
 input, textarea{

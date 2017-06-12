@@ -8,9 +8,7 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
      //take an action after the data loads
      obj.$loaded().then(function() {
 
-        console.log("loaded record:", obj.$id, obj.classes);
        angular.forEach(obj, function(value, key) {
-          console.log(key, value);
        });
          $scope.loaded = true;
      });
@@ -97,7 +95,6 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
       var unix= startDate.clone().add(day-1, 'day').format('YYYY-MM-DD');
     }
 
-    console.log('unix', unix, day);
 
     if(!firebase.auth().currentUser){
       window.alert("Aby wpisać się na zajęcia, musisz być zalogowana!")
@@ -110,7 +107,7 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
       window.alert('Nie ma więcej wolnych miejsc na wybrane zajęcia. Przepraszamy!')
       }
       else if  (className == '-')
-        {console.log('this is nit a class');}else{
+        {console.log('this is not a class');}else{
         for (key in obj[unix][className]) {
             if (obj[unix][className][key]==userIdentifier){
               alreadyInList = true
