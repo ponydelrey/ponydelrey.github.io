@@ -50,7 +50,7 @@ BBApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
             templateUrl: 'modules/manage/views/manage.html',
             controller: 'manageCtrl'
         })
-        .when('/bra', {
+        .when('/bra/:idd', {
             templateUrl: 'modules/classes/views/pdc.html',
             controller: 'itemCtrl'
         })
