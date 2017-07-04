@@ -50,6 +50,10 @@ BBApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
             templateUrl: 'modules/manage/views/manage.html',
             controller: 'manageCtrl'
         })
+        .when('/bra', {
+            templateUrl: 'modules/classes/views/pdc.html',
+            controller: 'itemCtrl'
+        })
         .otherwise({redirectTo : '/'})
 
         $locationProvider.html5Mode(true);
@@ -57,13 +61,12 @@ BBApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 }]);
 
 
-BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http', function ($scope, $rootScope, $location, $http) {
+BBApp.controller('MainController', ['$scope', '$rootScope',  '$location', '$http', '$routeParams', function ($scope, $rootScope, $location, $http, $routeParams) {
 
     $scope.user = {};
     $scope.showSignPanel = true;
     $scope.more = true;
     $scope.sup = false;
-   
 
 
       $scope.$on('$routeChangeStart', function(angularEvent, newUrl) {
