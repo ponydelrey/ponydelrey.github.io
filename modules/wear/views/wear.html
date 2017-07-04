@@ -13,11 +13,10 @@
                     <md-card-title>
           <md-card-title-media>
             <div class="sm-media-lg card-media">
-                <a ng-href="bra/{{products.id}}"><img ng-src="{{products.img}}" /> </a></div>
+          <a ng-href="bra/{{products.id}}"><img ng-src="{{products.img}}" /> </a></div>
           </md-card-title-media>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-
           <md-button>{{products.cena | currency: "PLN"}}</md-button>
           <md-button><i ng-click="buy(products.name)" class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
         </md-card-actions>
