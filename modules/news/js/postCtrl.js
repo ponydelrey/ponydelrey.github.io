@@ -109,9 +109,10 @@ angular.module('BBApp').controller('postCtrl', function ($scope, $firebaseArray,
   } else {
     window.alert('Aby zobaczyć swój plan, musisz się zalogować');
     event.preventDefault();
+     $location.path("/login");
 
   }
-    $location.path("/login");
+   
 });
 
     }
