@@ -23,6 +23,13 @@ margin-bottom: 40px;
   margin-top: -40px;
 }
 
+.col-md-10 {
+  background-color: #797979;
+  opacity: 0.9;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .btn-default {
     border: solid #333 1px;
     text-decoration: none;
@@ -178,6 +185,7 @@ cursor: pointer;
 }
 
 .gray {
+  position: relative;
   padding-top: 50px;
   margin-left: -100px;
   min-width: 1160px !important;

@@ -1,5 +1,14 @@
 <div>
 
-<div class="gray">
+<div class="col-md-10">
+<h1> {{item.name}} </h1>
+<img ng-src="{{item.img}}" />
+			<div class="col-md-4">
+
+          <p class="day">{{item.cena | currency: "PLN"}}</p>
+          <option ng-repeat="row in arr2" value="{{row}}">{{row}}</option>
+          <md-button><i ng-click="buy(item.name)" class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
+
+          </div>
 </div>
 </div>
