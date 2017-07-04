@@ -2,11 +2,19 @@
 
 <div class="col-md-10">
 <h1> {{item.name}} </h1>
-<img ng-src="{{item.img}}" />
+
+<img style="max-width: 300px" ng-src="{{item.img}}" />
 			<div class="col-md-4">
+				<label for="sel1" class="day">Wybierz rozmiar:</label>
+      <select class="form-control" id="sel1">
+        <option>36</option>
+        <option>37</option>
+        <option>38</option>
+        <option>39</option>
+      </select>
 
           <p class="day">{{item.cena | currency: "PLN"}}</p>
-          <option ng-repeat="row in arr2" value="{{row}}">{{row}}</option>
+          <option ng-repeat="row in size" value="{{row}}">{{row}}</option>
           <md-button><i ng-click="buy(item.name)" class="fa fa-shopping-cart" aria-hidden="true"></i></md-button>
 
           </div>

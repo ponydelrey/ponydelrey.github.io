@@ -7,7 +7,7 @@ angular.module('BBApp')
 
          var obj = $firebaseObject(ref);
           $scope.arr = [];
-          $scope.arr2 = [];
+          $scope.sizes = [];
 
         //take an action after the data loads
         obj.$loaded().then(function() {
@@ -18,16 +18,43 @@ angular.module('BBApp')
               }else if (value['size']!=undefined){
               	console.log('ff', value)
            angular.forEach(key, function(v, k) {
-           	arr2.push(k);
+           	$scope.sizes.push(k);
               //console.log('v k', v, k)
        });
               }
 
        });
-          console.log('vallie', $scope.item);
+          // console.log('valle', $scope.sizes);
 
      });
 
 
+
+$scope.buy = function(product){
+     firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+      var user = firebase.auth().currentUser;
+      var email = user.email;
+      var alreadyInList;
+
+
+      var atIndex = email.indexOf("@");
+      var dotIndex = email.indexOf('.');
+      var trimmedMail = email.substring(0,atIndex);
+      var end = email.substring(atIndex+1,dotIndex);
+      var userIdentifier = trimmedMail + end;
+
+      var refClass = firebase.database().ref().child('users' + '/' + userIdentifier);
+      var newUserRef = refClass.push(product);
+
+      var refClass2 = firebase.database().ref().child(product);
+      var newUserRef2 = refClass2.push(userIdentifier);
+      window.alert('Dziękujemy za złożenie zamówienia, informację o postępach otrzymasz drogą mailową');
+    }else{
+      window.alert("Zaloguj się, aby składać zamówienia")
+    }
+
+  });
+}
 
 });
