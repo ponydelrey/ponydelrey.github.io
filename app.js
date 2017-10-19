@@ -117,7 +117,7 @@ $scope.more = function(){
 }
 });
 
-$scope.my = "Galeria"
+$scope.my = "Gallery"
 
 
 }])
