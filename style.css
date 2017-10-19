@@ -165,13 +165,18 @@ margin-right: 10px;
 }
 
 .fa:hover {
-  color: #54E5BF;
+  border-radius: 3px;
+  color: #393939;
+  background-color: #54E5BF;
 cursor: pointer;
+  box-shadow: 0px 0px 5px #54E5BF;
  transform: scale(1.7, 1.7);
  -moz-transform: scale(1.7, 1.7);
 -ms-transform: scale(1.7, 1.7);
 -webkit-transform: scale(1.7, 1.7);
 -o-transform: scale(1.7, 1.7);
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
 }
 
 .hour:hover {
@@ -393,10 +398,15 @@ ul {
 }
 
 .btn-main:hover  {
-  color: #54E5BF;
-  text-transform: uppercase;
-  text-decoration: none;
-  transform: translateY(10px);
+    border: 2px solid;    
+    -moz-border-image: -moz-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, #3acfd5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+    color: #54E5BF;
+    text-decoration: none;
 }
 .header a {
     text-transform: uppercase;
@@ -411,8 +421,23 @@ ul {
        
       
 }
-.header a:hover {
+/*.header a:hover {
         text-shadow: 0 0 5px #FFF      
+}*/
+
+.header a::after {
+    content:  "   ";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #99A5EF;
+      -webkit-transition: width .3s;
+    transition: width .3s;
+}
+
+.header a:hover::after {
+    width: 120px;
+   
 }
 
 .jumbotron {
