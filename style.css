@@ -293,8 +293,33 @@ cursor: pointer;
   z-index: -10;
   left: 0;
   top: 0;
-  background: url("./images/pdr.jpg") no-repeat center center;
+  background: url("https://static.pexels.com/photos/270767/pexels-photo-270767.jpeg") no-repeat center center;
+  background-size: cover;
 
+}
+.responsive{
+  background-color: #454745;
+}
+.footer .p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.pull-right li a{
+  background-color: rgba(100, 100, 100, 0.5);
+  margin-bottom: 8px;
+  padding: 5px 5px 5px 5px;
+  width: 200px;
+  color: pink !important;
+}
+#log {
+  width: 220px !important;
+}
+.footer .pull-right p {
+  text-align: right;
 }
 }
 @font-face {
