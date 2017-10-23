@@ -3,7 +3,10 @@
           <a class = "btn-main" href="/" ng-click="more()"> Learn more </a>
     </div>
 
-<div   class="animate-show animate-hide supporting" ng-show="sup">
+<div   class="animate-show animate-hide supporting" ng-show="sup" ng-hide="more">
+  <button type="button" ng-click="less()" class="close" aria-label="Close">
+  <span aria-hidden="true" >&times;</span>
+</button>
         <div class="col-xs-12 col-sm-12 col-lg-4">
           <img src="./images/hoop.jpg" alt="hoop image">
           <h2>Aerial Hoop.</h2>

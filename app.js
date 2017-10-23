@@ -115,6 +115,10 @@ $scope.more = function(){
  $scope.more = !$scope.more;
  $scope.sup = !$scope.sup;
 }
+$scope.less = function(){
+    $scope.more = !$scope.more;
+ $scope.sup = false;
+}
 });
 
 $scope.my = "Gallery"

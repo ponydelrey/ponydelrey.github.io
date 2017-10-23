@@ -22,6 +22,9 @@ margin-bottom: 40px;
 .carousel-inner{
   margin-top: -40px;
 }
+button.close {
+  margin-right: 15px;
+}
 
 .col-md-10 {
   background-color: #797979;
@@ -289,13 +292,16 @@ cursor: pointer;
 
   body {
   width: 100%;
-  height: 100%;
+  height: 80%;
   z-index: -10;
   left: 0;
   top: 0;
   background: url("https://static.pexels.com/photos/270767/pexels-photo-270767.jpeg") no-repeat center center;
   background-size: cover;
 
+}
+.nav-left {
+  width: 190px;
 }
 .responsive{
   background-color: #454745;
@@ -309,7 +315,6 @@ cursor: pointer;
   text-align: center;
 }
 .pull-right li a{
-  background-color: rgba(100, 100, 100, 0.5);
   margin-bottom: 8px;
   padding: 5px 5px 5px 5px;
   width: 200px;
