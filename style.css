@@ -303,6 +303,9 @@ cursor: pointer;
 .nav-left {
   width: 190px;
 }
+#manage {
+  display: none;
+}
 .responsive{
   background-color: #454745;
 }

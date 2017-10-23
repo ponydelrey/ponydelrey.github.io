@@ -69,11 +69,11 @@
     <div data-ng-controller="MainController" class="header">
         <ul class="nav-left" id="myNav">
           <li><a class="icon" href="" onclick="myFunction()">&#9776;</a></li>
-          <li><a href="classes"> CLASSES </a></li>
-          <li><a href ="gallery"> {{ my }} </a></li>
-          <li><a href ="post"> MY PLAN </a></li>
-          <li ng-hide="admin"><a href ="wear">WonderWear </a></li>
-          <li ng-show="admin"><a href ="manage">MANAGE </a></li>
+          <li><a href="classes" onclick="myFunction()"> CLASSES </a></li>
+          <li><a href ="gallery" onclick="myFunction()"> {{ my }} </a></li>
+          <li><a href ="post" onclick="myFunction()"> MY PLAN </a></li>
+          <li ng-hide="admin" onclick="myFunction()"><a href ="wear">WonderWear </a></li>
+          <li id="manage" ng-show="admin"><a href ="manage">MANAGE </a></li>
         </ul>
           <ul class="pull-right">
             <li><a href="" ng-show="hideSignPanel" ng-bind="user.userName">  </a></li>
