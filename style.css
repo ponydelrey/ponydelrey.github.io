@@ -287,6 +287,11 @@ cursor: pointer;
   margin-bottom: 20px;
   margin-top: 15px;
 }
+@media (hover: none) {
+   a:link {
+      color: teal;
+   }
+}
 
 @media only screen and (max-width : 620px) {
 
@@ -312,8 +317,8 @@ a.btn-main {
   margin-left: -20px;
   padding: 20px 180px 20px 180px;
 }
-#manage {
-  display: none;
+ul li#manage {
+  visibility: hidden;
 }
 .responsive{
   background-color: #454745;
@@ -340,7 +345,7 @@ span.glyphicon-user {
 }
 span.glyphicon-log-in {
   margin-top: -16px;
-    margin-right: 10px;
+    margin-left: 15px;
 }
 .pull-right li a {
   text-indent: -9000px;
