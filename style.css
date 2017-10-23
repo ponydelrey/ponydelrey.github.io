@@ -318,9 +318,6 @@ a.btn-main {
 .responsive{
   background-color: #454745;
 }
-* { 
-    pointer-events: none; /* only use !important if you have to */
-}
 
 .footer .p {
   position: absolute;
@@ -331,18 +328,19 @@ a.btn-main {
   text-align: center;
 }
 .pull-right li span{
-  margin-right: 15px;
   font-size: 18px;
   display: inline-block;
-float:right;/* or display:block */
-text-indent:-5px;
+float:left;/* or display:block */
+text-indent:0px;
 }
 
 span.glyphicon-user {
   margin-top: 5px;
+
 }
 span.glyphicon-log-in {
   margin-top: -16px;
+    margin-right: 10px;
 }
 .pull-right li a {
   text-indent: -9000px;
