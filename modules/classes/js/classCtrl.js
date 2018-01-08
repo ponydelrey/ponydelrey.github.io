@@ -67,6 +67,10 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
   $scope.addMe = function(className, day, hour) {
 
       var user = firebase.auth().currentUser;
+      if (user == null){
+        window.alert("Musisz się zalogować, aby wpisać się na zajęcia");
+      }else {
+
       var email = user.email;
       var alreadyInList;
 
@@ -76,6 +80,9 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
       var trimmedMail = email.substring(0,atIndex);
       var end = email.substring(atIndex+1,dotIndex);
       var userIdentifier = trimmedMail + end;
+      }
+
+
 
     signToClass = function(){
 
@@ -96,7 +103,7 @@ angular.module('BBApp').controller('classCtrl', function ($scope, $firebaseArray
     }
 
 
-    if(!firebase.auth().currentUser){
+    if(firebase.auth().currentUser == null){
       window.alert("Aby wpisać się na zajęcia, musisz być zalogowana!")
     }
     else{
