@@ -301,7 +301,7 @@ cursor: pointer;
   z-index: -10;
   left: 0;
   top: 0;
-  background: url("https://static.pexels.com/photos/270767/pexels-photo-270767.jpeg") no-repeat center center fixed;
+  background: url("./images/wall3.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
