@@ -301,7 +301,7 @@ cursor: pointer;
   z-index: -10;
   left: 0;
   top: 0;
-  background: url("./images/wall3.jpg") no-repeat center center fixed;
+  background: url("./images/wall3") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -315,7 +315,7 @@ cursor: pointer;
 }
 a.btn-main {
   margin-left: -20px;
-  padding: 20px 180px 20px 180px;
+  padding: 20px 30px 20px 30px;
 }
 ul li#manage {
   visibility: hidden;
