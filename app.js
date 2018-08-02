@@ -121,7 +121,7 @@ $scope.less = function(){
 }
 });
 
-$scope.my = "Gallery"
+$scope.my = "Galleria"
 
 
 }])
