@@ -4,7 +4,7 @@ html, body {
   /*background: url("http://25.media.tumblr.com/98aec9f019a3eab0563695cac9e19cd3/tumblr_miaiuikwRt1qdeuyro1_1280.jpg")no-repeat center center fixed;*/
   
 /*background: url("https://static1.squarespace.com/static/506c697fc4aaef0cba44e226/t/5421901ae4b0d5fed94b1ee8/1411485730286/Lilli+Muehleisen+Aerial+Hoop.jpg?format=1500w")no-repeat center center fixed;*/
-background: url("./images/wall3.jpg")no-repeat center center fixed;
+background: url("http://www.scott-eaton.com/wp/wp-content/BodiesInMotion-AerialHoop.jpg")no-repeat center center fixed;
 
  background-size:cover;
  font-family: 'Helvetica';
@@ -428,7 +428,7 @@ ul {
 }
 .header {
    /*// background-color: #333333;*/
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.2); 
   height: 60px; 
   position: fixed;
   width: 100%;
@@ -557,10 +557,10 @@ ul {
   font-family: youregone;
   font-size: 70px;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   text-transform: capitalize;
- /* background-image: -webkit-linear-gradient(left,#76EAD0 33%, #2989d8,#FF6CE3 65%); */
-  color: #F1EAC3;
+  background-image: -webkit-linear-gradient(left,#76EAD0 33%, #2989d8,#FF6CE3 65%);
+  color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -620,11 +620,11 @@ ul {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 30px 0;
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 70px;
+    height: 100px;
     width: 100%;
     overflow:hidden;
     }
