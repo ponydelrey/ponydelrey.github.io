@@ -620,7 +620,7 @@ ul {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 20px 0;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -628,13 +628,10 @@ ul {
     width: 100%;
     overflow:hidden;
     }
-#find {
-  margin-top: -30px !important;
-}
-.footer>p {
+
+.footer p {
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
-  margin-top: 20px;
 }
 #logout {
   text-align: -webkit-right;
